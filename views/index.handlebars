@@ -13,10 +13,32 @@
 <body>
 	<div class="container">
 		<h1>FocusTym</h1>
-		<div>Add Subject:
+		<hr class=a>
+		<div>
+			<h2>Group: studs</h2>
+			<div class="btn btn-default friends">
+		        <button class="btn btn-primary">
+		           add
+		        </button>
+		        New Subject
+		   	</div>
+
+		   	{{#each subjects}}
+		   	</br>
+			<hr>		   	
+			<div class="btn btn-default subject">
+		        {{name}}
+		        <button class="btn btn-primary">
+		           edit
+		        </button>
+		        <button class="btn btn-primary">
+		           delet
+		        </button>
+		    </div>
+
+		    {{/each}}
 		</div>
-		<div>Math:
-		</div>
+
 				
 	</div>
 	<script src="js/jquery-1.11.0.js"></script>

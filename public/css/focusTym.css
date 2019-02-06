@@ -3,7 +3,22 @@
 	margin-top: 2em;
 }
 
-
+hr.a { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
 .friends{
-	width: 300px
+	width: 300px;
+}
+.subject{
+	width: 300px;
+}
+.btn.btn-primary{
+	text-align: left;
+	color: #FFFFFF;
 }
