@@ -12,13 +12,13 @@
 
 <body>
 	<div class="container">
-		<button type="button" onclick="goBack()">Go Back</button> 
-		<button align="left" type="button" onclick="">Settings</button> 
+		<button class="btn" onclick="goBack()">Go Back</button> 
+		<button align="right" class="btn"" onclick="">Settings</button> 
 		
 		<h1>{{name}}</h1>
 		<hr class=a>
 		<div>
-			<div style="width: 100%; display: table;">
+			<div class="btn" style="width: 100%; display: table;">
 		   	{{#each topics}}
 		   	</br>
 			<hr>
@@ -34,7 +34,7 @@
 			current topic:
 		</div>
 		<div>Equations | 3:27 </div>
-		play/pause	end topic
+		<button class="btn">play/pause</button>	<button class="btn">end topic</button>
 				
 	</div>
 	<script src="/js/jquery-1.11.0.js"></script>

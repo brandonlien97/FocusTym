@@ -5,7 +5,14 @@ var data = require('../data.json');
 exports.viewTopics = function(req, res) { 
 	var name = req.params.name; 
   	console.log("The project name is: " + name);
-  	console.log(data.subjects.name);
+  	
+  	var i, j;
+  	for(i = 0; i < data.subjects.length; i++){
+  		if(data.subjects[i].name == name){
+  			j = i;
+  		}
+  	}
+  	console.log(data.subjects[j].name);
 
-    res.render('topics', data.subjects[0]);
+    res.render('topics', data.subjects[j]);
 };

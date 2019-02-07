@@ -15,6 +15,7 @@
 		<h1>FocusTym</h1>
 		<hr class=a>
 		<div>
+			<div style="width: 100%; display: table;">
 			<h2>Group: studs</h2>
 			<div style="width: 100%; display: table;">
 			<div class="btn btn-default friends" style="display: table-row">
@@ -24,11 +25,10 @@
 		        New Subject
 		   	</div>
 		    </div>
-			<div style="width: 100%; display: table;">
-		   	{{#each subjects}}
 
+		   	{{#each subjects}}
 			<hr>
-			<div class="btn" style="display: table-row" >
+			<div class="btn btn-default" style="display: table-row" >
 		        <a id="{{name}}" href="topics/{{name}}">{{name}}</a>
 		        <button class="btn" id="edit">
 		           edit
