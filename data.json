@@ -19,12 +19,12 @@
 			"name": "Cognitive Science",
 			"topics": [
 				{
-					"topic":"equations",
+					"topic":"POVs",
 					"time": 1000,
 					"timeLeft" : 1000
 				},
 				{
-					"topic":"Derivatives",
+					"topic":"review",
 					"time": 3500,
 					"timeLeft" : 3500
 				}
@@ -34,12 +34,12 @@
 			"name": "Computer Science",
 			"topics": [
 				{
-					"topic":"equations",
+					"topic":"objects",
 					"time": 1000,
 					"timeLeft" : 1000
 				},
 				{
-					"topic":"Derivatives",
+					"topic":"LinkedLists",
 					"time": 3500,
 					"timeLeft" : 3500
 				}
@@ -49,12 +49,12 @@
 			"name": "Biology",
 			"topics": [
 				{
-					"topic":"equations",
+					"topic":"DNA",
 					"time": 1000,
 					"timeLeft" : 1000
 				},
 				{
-					"topic":"Derivatives",
+					"topic":"peptides",
 					"time": 3500,
 					"timeLeft" : 3500
 				}
@@ -64,12 +64,12 @@
 			"name": "Chemistry",
 			"topics": [
 				{
-					"topic":"equations",
+					"topic":"valance shells",
 					"time": 1000,
 					"timeLeft" : 1000
 				},
 				{
-					"topic":"Derivatives",
+					"topic":"spins",
 					"time": 3500,
 					"timeLeft" : 3500
 				}
