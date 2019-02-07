@@ -5,6 +5,9 @@ $(document).ready(function() {
 	initializePage();
 	})
 
+function goBack(){
+	window.history.back();
+}
 /*
  * Function that is called when the document is ready.
  */

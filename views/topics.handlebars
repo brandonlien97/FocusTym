@@ -12,7 +12,9 @@
 
 <body>
 	<div class="container">
-		<p><a href="window.history.back()">Back</a></p>
+		<button type="button" onclick="goBack()">Go Back</button> 
+		<button align="left" type="button" onclick="">Settings</button> 
+		
 		<h1>{{name}}</h1>
 		<hr class=a>
 		<div>
@@ -21,16 +23,18 @@
 		   	</br>
 			<hr>
 			
-			<div class="btn btn-default subject" style="display: table-row">
-		        {{topic}}
-		    </div>
-		    <div class="btn btn-default subject" style="display: table-row">
-		        {{time}}
-		    </div>
+			{{topic}}:{{time}}
+		   
 		    {{/each}}
 		    </div>
 		</div>
-
+			</br>
+					<hr>
+		<div>
+			current topic:
+		</div>
+		<div>Equations | 3:27 </div>
+		play/pause	end topic
 				
 	</div>
 	<script src="/js/jquery-1.11.0.js"></script>
