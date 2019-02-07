@@ -1,4 +1,8 @@
 git pull
 git add .
-git commit -m"$1"
+MSG="made minor changes"
+if [[ -n "$1" ]]; then
+	MSG="$1"
+fi
+git commit -m"$MSG"
 git push
