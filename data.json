@@ -1,19 +1,79 @@
 {
 	"subjects": [
 		{
-			"name": "Math"			
+			"name": "Math",
+			"topics": [
+				{
+					"topic":"equations",
+					"time": 1000,
+					"timeLeft" : 1000
+				},
+				{
+					"topic":"Derivatives",
+					"time": 3500,
+					"timeLeft" : 3500
+				}
+			]		
 		},
 		{
-			"name": "Cognitive Science"
+			"name": "Cognitive Science",
+			"topics": [
+				{
+					"topic":"equations",
+					"time": 1000,
+					"timeLeft" : 1000
+				},
+				{
+					"topic":"Derivatives",
+					"time": 3500,
+					"timeLeft" : 3500
+				}
+			]	
 		},
 		{
-			"name": "Computer Science"
+			"name": "Computer Science",
+			"topics": [
+				{
+					"topic":"equations",
+					"time": 1000,
+					"timeLeft" : 1000
+				},
+				{
+					"topic":"Derivatives",
+					"time": 3500,
+					"timeLeft" : 3500
+				}
+			]	
 		},
 		{
-			"name": "Biology"
+			"name": "Biology",
+			"topics": [
+				{
+					"topic":"equations",
+					"time": 1000,
+					"timeLeft" : 1000
+				},
+				{
+					"topic":"Derivatives",
+					"time": 3500,
+					"timeLeft" : 3500
+				}
+			]	
 		},
 		{
-			"name": "Chemistry"
+			"name": "Chemistry",
+			"topics": [
+				{
+					"topic":"equations",
+					"time": 1000,
+					"timeLeft" : 1000
+				},
+				{
+					"topic":"Derivatives",
+					"time": 3500,
+					"timeLeft" : 3500
+				}
+			]	
 		}
 	]
 }

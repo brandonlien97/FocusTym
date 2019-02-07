@@ -18,29 +18,28 @@
 			<h2>Group: studs</h2>
 			<div style="width: 100%; display: table;">
 			<div class="btn btn-default friends" style="display: table-row">
-		        <button class="btn btn-primary">
+		        <button class="btn">
 		           add
 		        </button>
 		        New Subject
 		   	</div>
 		    </div>
-
+			<div style="width: 100%; display: table;">
 		   	{{#each subjects}}
-		   	</br>
+
 			<hr>
-			<div style="width: 100%; display: table;">		   	
-			<div class="btn btn-default subject" style="display: table-row">
-		        {{name}}
-		        <button class="btn btn-primary edit">
+			<div class="btn" style="display: table-row" >
+		        <a id="{{name}}" href="topics/{{name}}">{{name}}</a>
+		        <button class="btn" id="edit">
 		           edit
 		        </button>
-		        <button class="btn btn-primary delet">
-		           delet
+		        <button class="btn" id="delete">
+		           delete
 		        </button>
 		    </div>
-			</div>
 
 		    {{/each}}
+		</div>
 		</div>
 
 				

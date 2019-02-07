@@ -22,11 +22,11 @@ hr.a {
 	text-align: center;
 	color: #000000;
 }
-.edit{
+#edit{
   text-align: left;
   color: #000000;
 }
-.delete{
+#delete{
   text-align: right;
   color: #000000;
 }
