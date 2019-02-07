@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>FocusTym</title>	
+	<title>{{subject}}</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -12,35 +12,22 @@
 
 <body>
 	<div class="container">
-		<h1>FocusTym</h1>
+		<h1>{{subject}}</h1>
 		<hr class=a>
 		<div>
-			<h2>Group: studs</h2>
 			<div style="width: 100%; display: table;">
-			<div class="btn btn-default friends" style="display: table-row">
-		        <button class="btn btn-primary">
-		           add
-		        </button>
-		        New Subject
-		   	</div>
-		    </div>
-
 		   	{{#each subjects}}
 		   	</br>
 			<hr>
-			<div style="width: 100%; display: table;">		   	
+			
 			<div class="btn btn-default subject" style="display: table-row">
-		        {{name}}
-		        <button class="btn btn-primary edit">
-		           edit
-		        </button>
-		        <button class="btn btn-primary delet">
-		           delet
-		        </button>
+		        {{topic}}
 		    </div>
-			</div>
-
+		    <div class="btn btn-default subject" style="display: table-row">
+		        {{time}}
+		    </div>
 		    {{/each}}
+		    </div>
 		</div>
 
 				

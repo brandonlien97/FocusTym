@@ -18,7 +18,15 @@ hr.a {
 .subject{
 	width: 300px;
 }
-.btn.btn-primary{
-	text-align: left;
-	color: #FFFFFF;
+.text{
+	text-align: center;
+	color: #000000;
+}
+.edit{
+  text-align: left;
+  color: #000000;
+}
+.delete{
+  text-align: right;
+  color: #000000;
 }
