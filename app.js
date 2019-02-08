@@ -19,6 +19,7 @@ var deleteSubject = require('./routes/delete');
 var settings = require('./routes/settings');
 var add = require('./routes/add');
 var endTopic = require('./routes/endTopic');
+var group = require('./routes/groups');
 
 var app = express();
 
@@ -52,6 +53,7 @@ app.get('/delete/:name', deleteSubject.delete);
 app.get('/settings', settings.settings);
 app.get('/add', add.add);
 app.get('/endTopic', endTopic.endTopic);
+app.get('/groups', group.groups);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
