@@ -4,7 +4,7 @@
 }
 
 hr.a { 
-  display: block;
+  display: table;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   margin-left: auto;
@@ -18,12 +18,14 @@ hr.a {
 .subject{
 	width: 300px;
 }
-
+#like{
+  color: #000000;
+}
 #edit{
-  text-align: left;
+  float:right;
   color: #000000;
 }
 #delete{
-  text-align: right;
+  float:right;
   color: #000000;
 }
