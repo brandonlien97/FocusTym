@@ -13,6 +13,13 @@ var topics = require('./routes/topics');
 // Example route
 // var user = require('./routes/user');
 
+// edit subjects
+var edit = require('./routes/edit');
+var deleteSubject = require('./routes/delete');
+var settings = require('./routes/settings');
+var add = require('./routes/add');
+var endTopic = require('./routes/endTopic');
+
 var app = express();
 
 // all environments
@@ -39,6 +46,12 @@ app.get('/', index.view);
 app.get('/topics/:name', topics.viewTopics);
 // Example route
 // app.get('/users', user.list);
+
+app.get('/edit/:name', edit.editTopic);
+app.get('/delete/:name', deleteSubject.delete);
+app.get('/settings', settings.settings);
+app.get('/add', add.add);
+app.get('/endTopic', endTopic.endTopic);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

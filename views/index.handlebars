@@ -15,7 +15,8 @@
 <body>
 	<div class="container">
 	<button class="btn" onclick="goBack()"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button> 
-			<button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button> 
+			<a id="settings" href="/settings">
+			<button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button></a>
 			
 		<h1>FocusTym</h1>
 		<hr class=a>
@@ -24,9 +25,10 @@
 			<h2>Group: studs</h2>
 			<div style="width: 100%; display: table;">
 			<div class="btn btn-default friends" style="display: table-row">
+		        <a id="add" href="/add">
 		        <button class="btn">
 		           <i class="fas fa-plus"></i>
-		        </button>
+		        </button></a>
 		        New Subject
 		   	</div>
 		    </div>
@@ -35,12 +37,17 @@
 			<hr>
 			<div class="btn btn-default" style="display: table-row" >
 		        <a id="{{name}}" href="topics/{{name}}">{{name}}</a>
-		        <button class="btn" id="edit">
-		           <i class="fas fa-user-edit"></i>
-		        </button>
-		        <button class="btn" id="delete">
-		           <i class="fas fa-trash-alt"></i>
-		        </button>
+		        <a id="edit" href="edit/{{name}}">
+		        	<button class="btn" id="edit">
+		           		<i class="fas fa-user-edit"></i>
+		        	</button>
+		        </a>
+		        
+		        <a id="delete" href="delete/{{name}}">
+		        	<button class="btn" id="delete">
+		           		<i class="fas fa-trash-alt"></i>
+		        	</button>
+		        </a>
 		    </div>
 
 		    {{/each}}
