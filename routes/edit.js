@@ -4,4 +4,5 @@ var data = require('../data.json');
  */
 exports.editTopic = function(req, res) {
 	res.render('editTopics', data);
+	
 };

@@ -9,15 +9,58 @@
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	
-		<link href="css/focusTym.css" rel="stylesheet">
+	<link href="css/focusTym.css" rel="stylesheet">
 </head>
 
 <body>
 	
  	<div class="container">
 		<button class="btn" onclick="goBack()"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button> 
-				
-	<h1>Create new tasks</h1>
+		<a id="settings" href="/settings">
+			<button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button>
+		</a>
+			
+	
+		<form id="addSubject" role="form" method="get" action="/add">
+			<h3>New Subject</h3>
+		    <div class="form-group">
+		      <label for="name">Subject:</label>
+		      <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+	   		</div>
+	  		<div class="form-group">
+	      		<label for="topic1">Topic 1:</label>
+	    	  <input type="text" class="form-control" id="description" placeholder="Topic" name="topic">
+	 	    </div>
+	 	    <div class="form-group">
+	      		<label for="time1">Time:</label>
+	    	  <input type="text" class="form-control" id="description" placeholder="time" name="time">
+	 	    </div>
+	 	    	<div class="form-group">
+	      		<label for="topic2">Topic 2:</label>
+	    	  <input type="text" class="form-control" id="description" placeholder="Topic" name="topic">
+	 	    </div>
+	 	    <div class="form-group">
+	      		<label for="time2">Time:</label>
+	    	  <input type="text" class="form-control" id="description" placeholder="time" name="time">
+	 	    </div>
+	 	    	<div class="form-group">
+	      		<label for="topic3">Topic 3:</label>
+	    	  <input type="text" class="form-control" id="description" placeholder="Topic" name="topic">
+	 	    </div>
+	 	    <div class="form-group">
+	      		<label for="time3">Time:</label>
+	    	  <input type="text" class="form-control" id="description" placeholder="time" name="time">
+	 	    </div>
+	 	    	<div class="form-group">
+	      		<label for="topic4">Topic 4:</label>
+	    	  <input type="text" class="form-control" id="description" placeholder="Topic" name="topic">
+	 	    </div>
+	 	    <div class="form-group">
+	      		<label for="time4">Time:</label>
+	    	  <input type="text" class="form-control" id="description" placeholder="time" name="time">
+	 	    </div>
+			    <input type="submit" id="submitBtn" class="btn btn-default" value="Add Subject"></input>
+		</form>
 	</div>
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>

@@ -1,7 +1,17 @@
-var data = require('../data.json');
+var data = require("../data.json");
 /*
  * GET home page.
  */
 exports.delete = function(req, res) {
-	res.render('delete', data);
-}
+	var name = req.params.name;
+	console.log("Deleting " + name);
+	var i;
+  	for(i = 0; i < data.subjects.length; i++){
+  		if(data.subjects[i].name == name){
+  			data.subjects.splice(i, 1); 	
+  			break;		
+  		}
+  	}
+	
+	res.render('index', data);
+};
