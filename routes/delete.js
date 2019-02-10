@@ -1,8 +1,9 @@
 var data = require("../data.json");
+
 /*
  * GET home page.
  */
-exports.delete = function(req, res) {
+exports.deleteSubject = function(req, res) {
 	var name = req.params.name;
 	console.log("Deleting " + name);
 	var i;
@@ -12,6 +13,7 @@ exports.delete = function(req, res) {
   			break;		
   		}
   	}
+ 
 	
 	res.render('index', data);
 };

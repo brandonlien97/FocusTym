@@ -13,7 +13,7 @@ var topics = require('./routes/topics');
 // Example route
 // var user = require('./routes/user');
 
-// edit subjects
+
 var edit = require('./routes/edit');
 var deleteSubject = require('./routes/delete');
 var settings = require('./routes/settings');
@@ -50,7 +50,7 @@ app.get('/topics/:name', topics.viewTopics);
 // app.get('/users', user.list);
 
 app.get('/edit/:name', edit.editTopic);
-app.get('/delete/:name', deleteSubject.delete);
+app.get('/delete/:name', deleteSubject.deleteSubject);
 app.get('/settings', settings.settings);
 app.get('/add', addNew.addNew);
 app.get('/submit', submitNew.submit);
