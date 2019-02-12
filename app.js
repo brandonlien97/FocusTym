@@ -21,6 +21,7 @@ var addNew = require('./routes/addNew');
 var submitNew = require('./routes/submit');
 var endTopic = require('./routes/endTopic');
 var group = require('./routes/groups');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -43,8 +44,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
-
-app.get('/', index.view);
+app.get('/', login.view);
+app.get('/login', login.login);
+app.get('/index', index.view);
 app.get('/topics/:name', topics.viewTopics);
 // Example route
 // app.get('/users', user.list);
