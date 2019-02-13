@@ -16,3 +16,26 @@ exports.viewTopics = function(req, res) { 
 
     res.render('topics', data.groups[j]);
 };
+
+exports.submitTask = function(req, res) {
+  var name = url.searchParams.get('name');;
+  var topic = req.query.topic;
+  var time = req.query.time;
+  var i, j;
+  var newTopic = {
+      "topic": topic,
+      "time": time,
+      "timeLeft": time
+  };
+  console.log(name);
+  console.log(newTopic);
+  for(i = 0; i < data.groups.length; i++){
+    if(data.groups[i].name == name) {
+      
+      
+      data.groups[i].topics.push(newTopic);
+    }
+  }
+
+  res.render('topics', data);
+};
