@@ -18,10 +18,10 @@ exports.viewTopics = function(req, res) { 
 };
 
 exports.submitTask = function(req, res) {
-  var name = url.searchParams.get('name');;
+  var name = req.params.name;
   var topic = req.query.topic;
   var time = req.query.time;
-  var i, j;
+  
   var newTopic = {
       "topic": topic,
       "time": time,
@@ -29,13 +29,14 @@ exports.submitTask = function(req, res) {
   };
   console.log(name);
   console.log(newTopic);
+  var i, j;
   for(i = 0; i < data.groups.length; i++){
     if(data.groups[i].name == name) {
       
-      
       data.groups[i].topics.push(newTopic);
+      j=i;
     }
   }
 
-  res.render('topics', data);
+  res.render('topics', data.groups[j]);
 };

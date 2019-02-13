@@ -61,7 +61,7 @@ app.get('/settings', settings.settings);
 app.get('/add', addNew.addNew);
 app.get('/addTask/:name', addTask.addTask);
 app.get('/submit', submitNew.submit);
-app.get('/topics/:name', submitTask.submitTask);
+app.get('/submitTask/:name', submitTask.submitTask);
 app.get('/endTopic', endTopic.endTopic);
 app.get('/groups', group.groups);
 

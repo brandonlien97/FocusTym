@@ -15,14 +15,15 @@
 <body>
 	
  	<div class="container">
+
 		<button class="btn" onclick="goBack()"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button> 
 		<a id="settings" href="/settings">
 			<button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button>
 		</a>
 			
-		
-		<form id="addTask" role="form" method="get" action="/topics/{{name}}">
-			<h3>New Task</h3>
+		<h1></h1>
+		<form id="addTask" role="form" method="get" action="/submitTask/{{name}}">
+			<h3>New Task for {{name}}</h3>
 	  		<div class="form-group">
 	      		<label for="topic">Topic:</label>
 	    	  <input type="text" class="form-control" id="topic" placeholder="Topic" name="topic">
