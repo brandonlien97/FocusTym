@@ -7,12 +7,12 @@ exports.viewTopics = function(req, res) { 
   	console.log("The project name is: " + name);
   	
   	var i, j;
-  	for(i = 0; i < data.subjects.length; i++){
-  		if(data.subjects[i].name == name){
+  	for(i = 0; i < data.groups.length; i++){
+  		if(data.groups[i].name == name){
   			j = i;
   		}
   	}
-  	console.log(data.subjects[j].name);
+  	console.log(data.groups[j].name);
 
-    res.render('topics', data.subjects[j]);
+    res.render('topics', data.groups[j]);
 };

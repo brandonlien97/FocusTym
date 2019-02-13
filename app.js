@@ -15,7 +15,8 @@ var topics = require('./routes/topics');
 
 
 var edit = require('./routes/edit');
-var deleteSubject = require('./routes/delete');
+var deleteGroup = require('./routes/delete');
+var deleteTask = require('./routes/deleteTask');
 var settings = require('./routes/settings');
 var addNew = require('./routes/addNew');
 var submitNew = require('./routes/submit');
@@ -52,7 +53,8 @@ app.get('/topics/:name', topics.viewTopics);
 // app.get('/users', user.list);
 
 app.get('/edit/:name', edit.editTopic);
-app.get('/delete/:name', deleteSubject.deleteSubject);
+app.get('/delete/:name', deleteGroup.deleteGroup);
+app.get('/delete/:name/:topic', deleteTask.deleteTask);
 app.get('/settings', settings.settings);
 app.get('/add', addNew.addNew);
 app.get('/submit', submitNew.submit);

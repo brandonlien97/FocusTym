@@ -30,11 +30,7 @@ exports.submit = function(req, res) {
 		newSubject["topics"].push({"topic":topic2, "time": time2, "timeLeft":time2});
 		
 	}
-	if(topic2 != undefined) {
-		
-		newSubject["topics"].push({"topic":topic2, "time": time2, "timeLeft":time2});
-		
-	}
+	
 	if(topic3 != undefined) {
 		
 		newSubject["topics"].push({"topic":topic3, "time": time3, "timeLeft":time3});
@@ -49,6 +45,6 @@ exports.submit = function(req, res) {
 
 	console.log(newSubject);
 
-	data.subjects.push(newSubject);
+	data.groups.push(newSubject);
 	res.render('index', data);
 }

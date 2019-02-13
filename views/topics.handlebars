@@ -5,8 +5,8 @@
 	<title>{{name}}</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	
 		<link href="/css/focusTym.css" rel="stylesheet">
@@ -26,6 +26,23 @@
 			<hr>
 			
 			{{topic}}:{{time}}
+
+			<button class="btn" id="like">
+		        	<i class="glyphicon glyphicon-thumbs-up"></i>
+		        </button>
+				
+				<a id="delete" href="/delete/{{name}}/{{topic}}">
+		        	<button class="btn" id="delete">
+		        		<i class="fas fa-trash-alt"></i>
+		        	</button>
+		      	</a>
+
+		        <a id="edit" href="/edit/{{name}}">
+		        	<button class="btn" id="edit">
+		           		<i class="fas fa-user-edit"></i>
+		        	</button>
+		        </a>
+		        
 		   
 		    {{/each}}
 		    </div>
