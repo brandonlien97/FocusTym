@@ -56,7 +56,7 @@ app.get('/topics/:name', topics.viewTopics);
 
 app.get('/edit/:name', edit.editTopic);
 app.get('/delete/:name', deleteGroup.deleteGroup);
-app.get('/delete/:name/:topic', deleteTask.deleteTask);
+app.get('/deleteTask/:topic', deleteTask.deleteTask);
 app.get('/settings', settings.settings);
 app.get('/add', addNew.addNew);
 app.get('/addTask/:name', addTask.addTask);

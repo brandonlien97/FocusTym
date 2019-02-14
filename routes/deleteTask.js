@@ -6,17 +6,17 @@ var data = require("../data.json");
 exports.deleteTask = function(req, res) {
 
 	var topic = req.params.topic;
-	console.log("Deleting " + name);
-	var i, j;
+
+	var i, j, h;
   	for(i = 0; i < data.groups.length; i++){
-      for(j = 0; j < data.groups.topics.length; j++){
-  		  if(data.groups.topics[j].topic == topic){
-  			 data.groups.topics.splice(i, 1); 	
-  			 break;
+      for(j = 0; j < data.groups[i].topics.length; j++){
+  		  if(data.groups[i].topics[j].topic == topic){
+  			 data.groups[i].topics.splice(j, 1); 	
+  			 h = i;
         }		
   		}
   	}
  
 	
-	res.render('topics', data);
+	res.render('topics', data.groups[h]);
 };
