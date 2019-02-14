@@ -15,6 +15,7 @@ var topics = require('./routes/topics');
 
 
 var edit = require('./routes/edit');
+var editForm = require('./routes/editTopic');
 var deleteGroup = require('./routes/delete');
 var deleteTask = require('./routes/deleteTask');
 var settings = require('./routes/settings');
@@ -23,8 +24,13 @@ var addTask = require('./routes/addTask');
 var submitNew = require('./routes/submit');
 var submitTask = require('./routes/topics');
 var endTopic = require('./routes/endTopic');
-var group = require('./routes/groups');
 var login = require('./routes/login');
+
+var sanitizeHtml = require('sanitize-html');
+var dirty = 'some bad input';
+
+// where sanitation goes
+
 
 var app = express();
 
@@ -54,7 +60,8 @@ app.get('/topics/:name', topics.viewTopics);
 // Example route
 // app.get('/users', user.list);
 
-app.get('/edit/:name', edit.editTopic);
+app.get('/editTask/:topic', edit.edit);
+app.get('/edited/:topic', editForm.editTopic);
 app.get('/delete/:name', deleteGroup.deleteGroup);
 app.get('/deleteTask/:topic', deleteTask.deleteTask);
 app.get('/settings', settings.settings);
@@ -63,7 +70,7 @@ app.get('/addTask/:name', addTask.addTask);
 app.get('/submit', submitNew.submit);
 app.get('/submitTask/:name', submitTask.submitTask);
 app.get('/endTopic', endTopic.endTopic);
-app.get('/groups', group.groups);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

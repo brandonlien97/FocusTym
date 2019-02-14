@@ -15,7 +15,8 @@
     "express": "3.x",
     "express3-handlebars": "*",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "sanitize-html": "^1.20.0"
   },
   "engines": {
     "node": "8.9.x"
