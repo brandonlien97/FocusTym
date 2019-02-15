@@ -12,6 +12,9 @@ exports.deleteGroup = function(req, res) {
   		if(data.groups[i].name == name){
   			data.groups.splice(i, 1); 	
   			break;		
+  		}else if(data.groups[i].name == ""){
+  					data.groups.splice(i, 1); 	
+  			  			break;	
   		}
   	}
  
