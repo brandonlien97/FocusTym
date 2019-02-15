@@ -25,18 +25,18 @@ exports.submit = function(req, res) {
 		]
 	};
 
-	if(topic2 != undefined) {
+	if(topic2 != undefined || topic2 == "") {
 		
 		newSubject["topics"].push({"topic":topic2, "time": time2, "timeLeft":time2});
 		
 	}
 	
-	if(topic3 != undefined) {
+	if(topic3 != undefined|| topic3 == "") {
 		
 		newSubject["topics"].push({"topic":topic3, "time": time3, "timeLeft":time3});
 		
 	}
-	if(topic4 != undefined) {
+	if(topic4 != undefined|| topic4 == "") {
 		
 		newSubject["topics"].push({"topic":topic4, "time": time4, "timeLeft":time4});
 		
