@@ -72,6 +72,8 @@ app.get('/submitTask/:name', submitTask.submitTask);
 app.get('/endTopic', endTopic.endTopic);
 app.get('/delete/', deleteGroup.deleteGroup);
 app.get('/deleteTask/', deleteTask.deleteTask);
+app.get('/editTask/', edit.edit);
+app.get('/edited/', editForm.editTopic);
 
 
 http.createServer(app).listen(app.get('port'), function(){
