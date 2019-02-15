@@ -70,6 +70,8 @@ app.get('/addTask/:name', addTask.addTask);
 app.get('/submit', submitNew.submit);
 app.get('/submitTask/:name', submitTask.submitTask);
 app.get('/endTopic', endTopic.endTopic);
+app.get('/delete/', deleteGroup.deleteGroup);
+app.get('/deleteTask/', deleteTask.deleteTask);
 
 
 http.createServer(app).listen(app.get('port'), function(){
