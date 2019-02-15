@@ -22,21 +22,28 @@ exports.submitTask = function(req, res) {
   var topic = req.query.topic;
   var time = req.query.time;
   
-  var newTopic = {
-      "topic": topic,
-      "time": time,
-      "timeLeft": time
-  };
   console.log(name);
   console.log(newTopic);
   var i, j;
   for(i = 0; i < data.groups.length; i++){
-    if(data.groups[i].name == name) {
-      
-      data.groups[i].topics.push(newTopic);
-      j=i;
+    if(data.groups[i].name == name) {      
+        j=i;
     }
   }
 
-  res.render('topics', data.groups[j]);
+  if(topic == '' || time == '') {
+    res.render('addTask', data.groups[j]);
+  }
+  else {
+    var newTopic = {
+      "topic": topic,
+      "time": time,
+      "timeLeft": time
+    };
+    
+    data.groups[j].topics.push(newTopic);
+
+    res.render('topics', data.groups[j]);
+  }
+  
 };
