@@ -21,10 +21,11 @@ function addUser(name){
 	if(users.name != undefined){
 		return users.groups;
 	}else{
-		var newUser = "name"{
-			groups:[]
+		var newUser = {
+			"name": name,
+			"groups":[]
 		};
-		users.push(newUser);
+		users.users.push(newUser);
 		console.log(users);
 	}
 }
