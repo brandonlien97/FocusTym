@@ -14,7 +14,7 @@
 
 <body>
 	<div class="container">
-	<a href="/login"><button class="btn"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button></a> 
+	<a href="/"><button class="btn"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button></a> 
 			<a id="settings" href="/settings">
 			<button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button></a>
 			
@@ -22,32 +22,35 @@
 		<hr class=a>
 		<div>
 			<div style="width: 100%; display: table;">
-			
-			<div style="width: 100%; display: table;">
-			<div class="btn btn-default friends" style="display: table-row">
-		        <a id="add" href="/add">
-		        <button class="btn">
-		           <i class="fas fa-plus"></i>
-		        </button></a>
-		        New Group
-		   	</div>
-		    </div>
+				<a id="add" href="/add">
+		    	<button class="btn">
+					<div style="width: 100%; display: table;">
+					<div class="btn btn-default friends" style="display: table-row">
+		       		New Group 
+					<i class="fas fa-plus"></i>
+		       
+		        	</div>
+		    		</div> 
+		    	</button>
+				</a>
 
-		   	{{#each groups}}
-			<hr>
-			<div  class="btn btn-default" style="display: table-row" >
-		        <a href="/topics/{{name}}"id="{{name}}">{{name}}</a>
+		   		{{#each groups}}
+				<hr>
+				<a href="/topics/{{name}}" id="{{name}}">
+					<button class="btn btn-default" style="width: 100%; display: table-row" >
+		      	     {{name}}
 				
-				<a id="delete" href="/delete/{{name}}">
-		        	<button class="btn" id="delete">
-		        		<i class="fas fa-trash-alt"></i>
-		        	</button>
-		      	</a>
-		        
-		    </div>
+		   			</button>
+		   		
+						<a id="delete" href="/delete/{{name}}">
+		        			<button class="btn" id="delete">
+		        				<i class="fas fa-trash-alt"></i>
+		        			</button>
+		      			</a>
+		        </a>
 
-		    {{/each}}
-		</div>
+		    	{{/each}}
+			</div>
 		</div>
 
 				

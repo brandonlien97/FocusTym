@@ -22,14 +22,17 @@
 		<div>	
 			<div style="width: 100%; display: table;">
 			
-			<div style="width: 100%; display: table;">
-			<div class="btn btn-default friends" style="display: table-row">
-		        <a id="add" href="/addTask/{{name}}">
-		        <button class="btn">
-		           <i class="fas fa-plus"></i>
-		        </button></a>
-		        Add Task
-		   	</div>
+			<a id="add" href="/addTask/{{name}}">
+		    	<button class="btn">
+					<div style="width: 100%; display: table;">
+					<div class="btn btn-default friends" style="display: table-row">
+		       		Add Task 
+					<i class="fas fa-plus"></i>
+		       
+		        	</div>
+		    		</div> 
+		    	</button>
+				</a>
 
 			{{#each topics}}
 			<div class="btn" style="width: 100%; display: table;">
