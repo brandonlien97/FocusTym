@@ -17,12 +17,13 @@ exports.join = function(req, res) {
 	}
 	console.log(j,data.groups[j]);
 	if(j == null || j == undefined){
-		
+
 	}
 	else {
-
-		users.users[getUser()].groups.push(j);
-		console.log(users);
+		if(!users.users[getUser()].groups.includes(j)){
+			users.users[getUser()].groups.push(j);
+			console.log(users);
+		}
 		rend(req, res);
 	}
 

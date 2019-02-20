@@ -37,6 +37,7 @@ exports.login = function(req, res){
 function addUser(usr,j){
 	var i,j;
 	for(i = 0; i < users.users.length; i++){
+		console.log(users);
 		if(!users.users[i].name.localeCompare( usr)) {
 
 		console.log(users.users[i],usr);

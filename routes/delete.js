@@ -3,6 +3,8 @@ var users = require('../users.json');
 /*
  * GET home page.
  */
+
+var index = require('./index');
 exports.deleteGroup = function(req, res) {
 
 	var name = req.params.name;
@@ -10,17 +12,22 @@ exports.deleteGroup = function(req, res) {
 	var i;
   	for(i = 0; i < data.groups.length; i++){
   		if(data.groups[i].name == name){
-  			data.groups.splice(i, 1); 	
+  			//data.groups.splice(i, 1); 	
   			break;		
   		}else if(data.groups[i].name == ""){
   					data.groups.splice(i, 1); 	
   			  			break;	
   		}
-  	}
- 
-	
-  users.users[getUser()].groups.splice(i, 1);
-	res.render('index', data);
+  }
+  console.log(i,users.users[getUser()].groups)
+  var j;
+  for(j = 0; j < users.users[getUser()].groups.length;j++){
+  	if (users.users[getUser()].groups[j] == i){
+        users.users[getUser()].groups.splice(j, 1);
+        rend(req, res);
+    }
+  }
+
 };
 
 function getUser(){
@@ -34,4 +41,50 @@ function getUser(){
     }
   }
   return j;
+}
+
+function rend(req, res){
+  var u = global.globalUser;
+  var p = req.query.password;
+    var i,j;
+  for(i = 0; i < data.groups.length; i++){
+    if(data.groups[i].name == u) {
+      j=i;
+      break;
+    }
+  }
+  var groups = addUser(u,j);
+  var k;
+  var dat ={"groups":[]};
+  for(i = 0; i < groups.length; i++){
+    dat.groups[i] = data.groups[groups[i]];
+  }
+  console.log(dat);
+  res.render('index', dat);
+}
+
+function addUser(usr,j){
+  var i,j;
+  for(i = 0; i < users.users.length; i++){
+    if(!users.users[i].name.localeCompare( usr)) {
+
+    console.log(users.users[i],usr);
+      j=i;
+      break;
+    }else{
+      j=0;
+    }
+  }
+  console.log(users.users[j].name.localeCompare( usr),usr,users.users[j]);
+  if(!users.users[j].name.localeCompare( usr)){
+    return users.users[j].groups;
+  }else{
+    var newUser = {
+      "name": usr,
+      "groups":[]
+    };
+    users.users.push(newUser);
+    console.log(users);
+    return [];
+  }
 }
