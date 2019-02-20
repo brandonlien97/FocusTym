@@ -26,6 +26,7 @@ var submitTask = require('./routes/topics');
 var endTopic = require('./routes/endTopic');
 var login = require('./routes/login');
 var join = require('./routes/join');
+var sort = require('./routes/topics');
 
 var sanitizeHtml = require('sanitize-html');
 var dirty = 'some bad input';
@@ -74,11 +75,8 @@ app.get('/addTask/:name', addTask.addTask);
 app.get('/submit', submitNew.submit);
 app.get('/submitTask/:name', submitTask.submitTask);
 app.get('/endTopic', endTopic.endTopic);
-app.get('/deleteTask/', deleteTask.deleteTask);
-app.get('/editTask/', edit.edit);
-app.get('/edited/', editForm.editTopic);
-app.get('/edit/', editForm.editTopic);
 
+app.get('/sort/:topic', sort.sort);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

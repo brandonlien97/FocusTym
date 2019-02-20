@@ -47,3 +47,38 @@ exports.submitTask = function(req, res) {
   }
   
 };
+
+exports.sort = function(req, res) {
+  
+  var topic = req.params.topic;
+
+  
+  console.log(topic);
+  
+  var i, j, h, k;
+  for(i = 0; i < data.groups.length; i++){
+    for(j=0; j < data.groups[i].topics.length; j++) {
+      if(data.groups[i].topics[j].topic == topic) {      
+          h=i;
+          k=j;
+          break;
+      }
+    }
+  }
+
+  data.groups[h].topics[k].priority = data.groups[h].topics[k].priority + 1;
+  data.groups[h].topics.sort(GetSortOrder('priority'));
+  res.render('topics', data.groups[h]);
+};
+
+//Comparer Function  
+function GetSortOrder(prop) {  
+    return function(a, b) {  
+        if (a[prop] < b[prop]) {  
+            return 1;  
+        } else if (a[prop] > b[prop]) {  
+            return -1;  
+        }  
+        return 0;  
+    }  
+};
