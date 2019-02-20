@@ -5,7 +5,7 @@ $(document).ready(function() {
 	initializePage();
 	
 })
-
+$("#joinGroupbtn").click(group);
 function goBack(){
 	window.history.back();
 }
@@ -14,10 +14,10 @@ function goBack(){
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	$("#joinGroup").click(group());
+
 }
 
 function group(){
 	console.log("clicked");
-	$("#name").text("Group not found");
+	$("#warn").text("Group not found");
 }
