@@ -1,5 +1,5 @@
 var data = require("../data.json");
-
+var users = require('../users.json');
 /*
  * GET home page.
  */
@@ -13,5 +13,6 @@ exports.addTask = function(req, res) {
 			break;
 		}
 	}
+
 	res.render('addTask', data.groups[j]);
 };

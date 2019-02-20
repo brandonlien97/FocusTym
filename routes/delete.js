@@ -1,5 +1,5 @@
 var data = require("../data.json");
-
+var users = require('../users.json');
 /*
  * GET home page.
  */
@@ -19,5 +19,19 @@ exports.deleteGroup = function(req, res) {
   	}
  
 	
+  users.users[getUser()].groups.splice(i, 1);
 	res.render('index', data);
 };
+
+function getUser(){
+  var i,j;
+  for(i = 0; i < users.users.length; i++){
+    if(!users.users[i].name.localeCompare( global.globalUser)) {
+      j=i;
+      break;
+    }else{
+      j=0;
+    }
+  }
+  return j;
+}

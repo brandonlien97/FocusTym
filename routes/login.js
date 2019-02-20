@@ -9,8 +9,8 @@ exports.view = function(req, res){
   res.render('login',data);
 };
 
-exports.login = function(req, res){
-	var u = req.query.username;
+function rend(req, res){
+	var u = global.globalUser;
 	var p = req.query.password;
 		var i,j;
 	for(i = 0; i < data.groups.length; i++){
@@ -27,6 +27,11 @@ exports.login = function(req, res){
 	}
 	console.log(dat);
 	res.render('index', dat);
+}
+
+exports.login = function(req, res){
+	global.globalUser = req.query.username;
+	rend(req, res);
 }
 
 function addUser(usr,j){
