@@ -12,6 +12,9 @@ function goBack(){
  * Function that is called when the document is ready.
  */
 function initializePage() {
-
 	console.log("Javascript connected!");
+}
+
+function group(){
+	$("#name").text("Group not found");
 }

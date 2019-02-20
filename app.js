@@ -25,6 +25,7 @@ var submitNew = require('./routes/submit');
 var submitTask = require('./routes/topics');
 var endTopic = require('./routes/endTopic');
 var login = require('./routes/login');
+var join = require('./routes/join');
 
 var sanitizeHtml = require('sanitize-html');
 var dirty = 'some bad input';
@@ -60,6 +61,9 @@ app.get('/topics/:name', topics.viewTopics);
 // Example route
 // app.get('/users', user.list);
 
+app.get('/joinGroup',join.joinGroup);
+app.get('/join',join.join);
+app.get('/join/:group',join.join);
 app.get('/editTask/:topic', edit.edit);
 app.get('/edited/:topic', editForm.editTopic);
 app.get('/delete/:name', deleteGroup.deleteGroup);
