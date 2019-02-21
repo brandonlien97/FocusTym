@@ -14,7 +14,7 @@ function goBack(){
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	setup();
+	$("#play").click(function(){setup();});
 
 }
 
@@ -26,6 +26,7 @@ function group(){
 var counter = 0;
 var timeleft = 120;
 
+$("#timer").text(convertSeconds(timeleft - counter));
 function convertSeconds(s) {
 	var min = Math.floor(s / 60);
 	var sec = s % 60;
@@ -63,13 +64,19 @@ function setup() {
 
 	var interval = setInterval(timeIt, 1000);
 
+	var play = true;
 	function timeIt(){
-		counter++;
-		$("#timer").text(convertSeconds(timeleft - counter));
-		if (counter == timeleft) {
-			clearInterval(interval);
-			counter = 0;
-			playAudio();
+		$('#play').click(function(){play = true;});
+		$('#pause').click(function(){play = false;});
+		console.log(play);
+		if(play){
+			counter++;
+			$("#timer").text(convertSeconds(timeleft - counter));
+			if (counter == timeleft) {
+				clearInterval(interval);
+				counter = 0;
+				playAudio();
+			}
 		}
 
 	}
