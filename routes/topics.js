@@ -38,7 +38,8 @@ exports.submitTask = function(req, res) {
     var newTopic = {
       "topic": topic,
       "time": time,
-      "timeLeft": time
+      "timeLeft": time,
+      "priority": 0
     };
     
     data.groups[j].topics.push(newTopic);
