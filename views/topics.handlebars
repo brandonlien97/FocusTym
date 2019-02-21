@@ -38,10 +38,22 @@
 			<div class="btn" style="width: 100%; display: table;">
 		   	
 				{{topic}}:{{time}}
+				
+		        {{#if priority}}
+		        <a id="like" href="/sort/{{topic}}">
+				 	<button class="btn" id="like">
+		        		<i class="glyphicon glyphicon-thumbs-up" style='color:blue'></i>
+		        	</button>
+		        </a>
+		        <font size='1' color='blue'>{{priority}}</font>
+                {{else}}
 
-				<button class="btn" id="like">
-		        	<i class="glyphicon glyphicon-thumbs-up"></i>
-		        </button>
+		        <a id="like" href="/sort/{{topic}}">
+				 	<button class="btn" id="like">
+		        		<i class="glyphicon glyphicon-thumbs-up"></i>
+		        	</button>
+		        </a>
+		        {{/if}}
 				
 				<a id="delete" href="/deleteTask/{{topic}}">
 		        	<button class="btn" id="delete">

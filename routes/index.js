@@ -27,7 +27,7 @@ function rend(req, res){
 	}
 	console.log(dat);
 	res.render('index', dat);
-}
+};
 
 function addUser(usr,j){
 	var i,j;
@@ -53,4 +53,4 @@ function addUser(usr,j){
 		console.log(users);
 		return [];
 	}
-}
+};

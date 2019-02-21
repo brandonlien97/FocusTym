@@ -6,12 +6,14 @@
 				{
 					"topic":"equations",
 					"time": 1000,
-					"timeLeft" : 1000
+					"timeLeft" : 1000,
+					"priority": 0
 				},
 				{
 					"topic":"Derivatives",
 					"time": 3500,
-					"timeLeft" : 3500
+					"timeLeft" : 3500,
+					"priority": 0
 				}
 			]		
 		},
@@ -21,12 +23,14 @@
 				{
 					"topic":"POVs",
 					"time": 1000,
-					"timeLeft" : 1000
+					"timeLeft" : 1000,
+					"priority": 0
 				},
 				{
 					"topic":"review",
 					"time": 3500,
-					"timeLeft" : 3500
+					"timeLeft" : 3500,
+					"priority": 0
 				}
 			]	
 		},
@@ -36,12 +40,14 @@
 				{
 					"topic":"objects",
 					"time": 1000,
-					"timeLeft" : 1000
+					"timeLeft" : 1000,
+					"priority": 0
 				},
 				{
 					"topic":"LinkedLists",
 					"time": 3500,
-					"timeLeft" : 3500
+					"timeLeft" : 3500,
+					"priority": 0
 				}
 			]	
 		},
@@ -51,12 +57,14 @@
 				{
 					"topic":"DNA",
 					"time": 1000,
-					"timeLeft" : 1000
+					"timeLeft" : 1000,
+					"priority": 0
 				},
 				{
 					"topic":"peptides",
 					"time": 3500,
-					"timeLeft" : 3500
+					"timeLeft" : 3500,
+					"priority": 0
 				}
 			]	
 		},
@@ -66,12 +74,14 @@
 				{
 					"topic":"valance shells",
 					"time": 1000,
-					"timeLeft" : 1000
+					"timeLeft" : 1000,
+					"priority": 0
 				},
 				{
 					"topic":"spins",
 					"time": 3500,
-					"timeLeft" : 3500
+					"timeLeft" : 3500,
+					"priority": 0
 				}
 			]	
 		}
