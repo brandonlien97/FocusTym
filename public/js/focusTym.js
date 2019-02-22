@@ -12,10 +12,14 @@ function goBack(){
 /*
  * Function that is called when the document is ready.
  */
+
+var counter = 0;
+var timeleft;
 function initializePage() {
 	console.log("Javascript connected!");
-	$("#play").click(function(){setup();});
-
+	timeleft = $("#time_0").html()
+	$("#currectTopic").text($("#topic_0").html())
+	setup();;
 }
 
 function group(){
@@ -23,8 +27,7 @@ function group(){
 	$("#warn").text("Group not found");
 }
 
-var counter = 0;
-var timeleft = 120;
+
 
 $("#timer").text(convertSeconds(timeleft - counter));
 function convertSeconds(s) {
@@ -60,15 +63,15 @@ function pauseAudio() {
 
 function setup() {
 	console.log("Timer ready");
-	$("#timer").text(convertSeconds(timeleft - counter));
+	var timer = timeleft
+	$("#timer").text(convertSeconds(timer - counter));
 
 	var interval = setInterval(timeIt, 1000);
-
-	var play = true;
+	var play = false;
 	function timeIt(){
 		$('#play').click(function(){play = true;});
 		$('#pause').click(function(){play = false;});
-		console.log(play);
+
 		if(play){
 			counter++;
 			$("#timer").text(convertSeconds(timeleft - counter));

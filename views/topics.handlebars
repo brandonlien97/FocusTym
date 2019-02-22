@@ -35,9 +35,9 @@
 				</a>
 
 			{{#each topics}}
-			<div class="btn" style="width: 100%; display: table;">
+			<div id="{{@index}}" class="btn" style="width: 100%; display: table;">
 		   	
-				{{topic}}:{{time}}
+				<text id="topic_{{@index}}">{{topic}}</text>:<text id="time_{{@index}}">{{time}}</text>
 				
 		        {{#if priority}}
 		        <a id="like" href="/sort/{{topic}}">
@@ -75,11 +75,11 @@
 					
 		<div>
 			<!-- How do you get {{topic}} to print out the highest voted topic?-->
-			Current Topic: {{topic}}
+			Current Topic: <text id="currectTopic"></text>
 		</div>
 
 		<!-- The "Time Goes Here" gets replaced by the javascript timer in focusTym.js -->
-		<p id="timer">Time Goes Here</p>
+		<p id="timer"></p>
 		
 		<!-- I really don't know what to do here lol. Basically, I want to make an ID for the audio file and then in focusTym.js, I can getElementById and use the sound file. My reference: https://www.w3schools.com/jsref/met_audio_play.asp
 		<p id="FirePager.mp3">
