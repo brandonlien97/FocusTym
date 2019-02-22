@@ -51,7 +51,8 @@ function convertSeconds(s) {
 	}
 }
 
-var audio = document.getElementById('FirePager.mp3');
+/*var audio = document.getElementById('FirePager.mp3');*/
+var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
 
 function playAudio() {
 	audio.play();
