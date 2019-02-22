@@ -7,8 +7,9 @@ exports.editTopic = function(req, res) { 
   var oldTopic = req.params.topic;
   var topic = req.query.topic;
   var time = req.query.time;
+  
 
-  var i, j, h, k;
+  var i, j, h, k, priority;
 
 
 
@@ -17,6 +18,7 @@ exports.editTopic = function(req, res) { 
       if(data.groups[i].topics[j].topic == oldTopic){
         h = i;
         k = j;  
+        priority = data.groups[i].topics[j].priority;
         break;
       }   
     }
@@ -33,7 +35,7 @@ exports.editTopic = function(req, res) { 
       "topic": topic,
       "time": time,
       "timeLeft": time,
-      "priority": 0
+      "priority": priority
     };
     
     data.groups[h].topics[k] = newTopic;
