@@ -54,3 +54,7 @@ function addUser(usr,j){
 		return [];
 	}
 };
+
+exports.displayHelp = function(req, res) {
+	res.render('help');
+}
