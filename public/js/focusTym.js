@@ -19,7 +19,10 @@ function initializePage() {
 	console.log("Javascript connected!");
 	timeleft = $("#time_0").html()
 	$("#currectTopic").text($("#topic_0").html())
-	setup();;
+	setup();
+	$("#nextTopic").click(function(){
+		$("#0 #delete").click();
+	});
 }
 
 function group(){
@@ -31,6 +34,10 @@ function group(){
 
 $("#timer").text(convertSeconds(timeleft - counter));
 function convertSeconds(s) {
+	console.log(s);
+	if(isNaN(s)){
+		return "No topics left. you are done!";
+	}
 	var min = Math.floor(s / 60);
 	var sec = s % 60;
 	if (min < 10) {

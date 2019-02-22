@@ -31,7 +31,7 @@ exports.submitTask = function(req, res) {
     }
   }
 
-  if(topic == '' || time == '') {
+  if(topic == '' || time == '' || isNaN(time)) {
     res.render('addTask', data.groups[j]);
   }
   else {

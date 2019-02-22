@@ -7,8 +7,9 @@ exports.deleteTask = function(req, res) {
 
 	var topic = req.params.topic;
 
-
+  console.log(data.groups);
 	var i, j, h;
+  h=0;
   	for(i = 0; i < data.groups.length; i++){
       for(j = 0; j < data.groups[i].topics.length; j++){
   		  if(data.groups[i].topics[j].topic == topic){

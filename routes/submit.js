@@ -24,7 +24,8 @@ exports.submit = function(req, res) {
 		res.render('add', data);
 	}
 	
-	else if(topic1 != '' &&  time1 != '' ) {
+	else if(topic1 != '' &&  time1 != '' && !isNaN(time1)) {
+		console.log(time1);
     	var newSubject = {
 			"name": name,
 		    "topics": [
@@ -35,7 +36,7 @@ exports.submit = function(req, res) {
 		    }
 		    ]
 		};
-		if((topic2 != '' &&  time2 != '')) {
+		if((topic2 != '' &&  time2 != '' && !isNaN(time2))) {
 		
 			newSubject["topics"].push({"topic":topic2, "time": time2, "timeLeft":time2});
             
