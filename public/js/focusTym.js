@@ -58,9 +58,16 @@ function convertSeconds(s) {
 	}
 }
 
-/*var audio = document.getElementById('FirePager.mp3');*/
-var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+/* EXTRA SOUND URLS 
+https://www.freespecialeffects.co.uk/soundfx/music/drum_09.wav
+https://www.freespecialeffects.co.uk/soundfx/music/fanfare7.wav
+https://www.freespecialeffects.co.uk/soundfx/aircraft_cockpit/cockpit_warning_2.wav
+https://www.freespecialeffects.co.uk/soundfx/animals/bird.wav
+https://www.freespecialeffects.co.uk/soundfx/animals/frog1.wav
+*/
 
+var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+audio.loop = true;
 function playAudio() {
 	audio.play();
 }
@@ -78,7 +85,9 @@ function setup() {
 	var play = false;
 	function timeIt(){
 		$('#play').click(function(){play = true;});
-		$('#pause').click(function(){play = false;});
+		$('#pause').click(function(){
+			play = false;
+			pauseAudio();});
 
 		if(play){
 			counter++;
