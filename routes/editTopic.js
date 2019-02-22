@@ -32,10 +32,24 @@ exports.editTopic = function(req, res) { 
     var newTopic = {
       "topic": topic,
       "time": time,
-      "timeLeft": time
+      "timeLeft": time,
+      "priority": 0
     };
     
-    data.groups[h].topics[k] = newTopic;  
+    data.groups[h].topics[k] = newTopic;
+    data.groups[h].topics.sort(GetSortOrder('priority'));
     res.render('topics', data.groups[h]); 
   }
+};
+
+//Comparer Function  
+function GetSortOrder(prop) {  
+    return function(a, b) {  
+        if (a[prop] < b[prop]) {  
+            return 1;  
+        } else if (a[prop] > b[prop]) {  
+            return -1;  
+        }  
+        return 0;  
+    }  
 };

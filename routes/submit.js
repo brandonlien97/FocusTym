@@ -32,13 +32,14 @@ exports.submit = function(req, res) {
 		    {
 		    	"topic": topic1,
 			    "time": time1,
-			    "timeLeft": time1
+			    "timeLeft": time1,
+			    "priority": 0
 		    }
 		    ]
 		};
 		if((topic2 != '' &&  time2 != '' && !isNaN(time2))) {
 		
-			newSubject["topics"].push({"topic":topic2, "time": time2, "timeLeft":time2});
+			newSubject["topics"].push({"topic":topic2, "time": time2, "timeLeft":time2, "priority": 0});
             
 		}
 		console.log("new subject: ", newSubject);
