@@ -22,7 +22,7 @@ exports.editTopic = function(req, res) { 
     }
   }
   
-  if(topic == '' || time == '') {
+  if(topic == '' || time == ''||isNaN(time)) {
     res.render('editTopics', data.groups[h].topics[k]);
   }
   else {
