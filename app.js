@@ -69,6 +69,7 @@ app.get('/editTask/:topic', edit.edit);
 app.get('/edited/:topic', editForm.editTopic);
 app.get('/delete/:name', deleteGroup.deleteGroup);
 app.get('/deleteTask/:topic', deleteTask.deleteTask);
+app.get('/deleteTask/', deleteTask.deleteTask);
 app.get('/settings', settings.settings);
 app.get('/add', addNew.addNew);
 app.get('/addTask/:name', addTask.addTask);
