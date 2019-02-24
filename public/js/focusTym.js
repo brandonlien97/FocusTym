@@ -5,6 +5,7 @@ $(document).ready(function() {
 	initializePage();
 	
 })
+var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
 $("#joinGroupbtn").click(group);
 function goBack(){
 	window.history.back();
@@ -18,18 +19,32 @@ var timeleft;
 function initializePage() {
 	console.log("Javascript connected!");
 	timeleft = $("#time_0").html()
+
 	$("#currectTopic").text($("#topic_0").html())
 	setup();
 	$("#nextTopic").click(function(){
 		$("#0 #delete").click();
 	});
+
+
+// // Instantiate a slider
+// 	var mySlider = $("#vol").bootstrapSlider();
+ 
+// // Call a method on the slider
+// 	var value = $("#vol").bootstrapSlider('getValue');
+// 	console.log(value);
+// With JQuery
+$('#vol').slider({
+	formatter: function(value) {
+		audio.volume = value/10;
+	}
+});
 }
 
 function group(){
 	console.log("clicked");
 	$("#warn").text("Group not found");
 }
-
 
 
 $("#timer").text(convertSeconds(timeleft - counter));
@@ -66,7 +81,7 @@ https://www.freespecialeffects.co.uk/soundfx/animals/bird.wav
 https://www.freespecialeffects.co.uk/soundfx/animals/frog1.wav
 */
 
-var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+//var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
 audio.loop = true;
 function playAudio() {
 	audio.play();
