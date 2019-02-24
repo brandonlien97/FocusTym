@@ -86,7 +86,7 @@ audio.loop = true;
 function playAudio() {
 	console.log(audio.volume);
 	audio.volume = localStorage.getItem("volume");
-	console.log(volume);
+	console.log(audio.volume);
 	audio.play();
 }
 function pauseAudio() {
