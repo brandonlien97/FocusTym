@@ -13,7 +13,7 @@ function goBack(){
 /*
  * Function that is called when the document is ready.
  */
-
+var volume
 var counter = 0;
 var timeleft;
 function initializePage() {
@@ -36,7 +36,7 @@ function initializePage() {
 // With JQuery
 $('#vol').slider({
 	formatter: function(value) {
-		audio.volume = value/10;
+		volume = value/10;
 	}
 });
 }
@@ -84,6 +84,9 @@ https://www.freespecialeffects.co.uk/soundfx/animals/frog1.wav
 //var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
 audio.loop = true;
 function playAudio() {
+	console.log(volume);
+	audio.volume = volume;
+	console.log(volume);
 	audio.play();
 }
 function pauseAudio() {
