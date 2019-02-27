@@ -5,7 +5,9 @@ $(document).ready(function() {
 	initializePage();
 	
 })
-var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+//"https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav"
+var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/glass/glass_breaking.mp3");
+
 $("#joinGroupbtn").click(group);
 function goBack(){
 	window.history.back();
