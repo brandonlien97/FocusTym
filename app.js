@@ -16,6 +16,8 @@ var topics = require('./routes/topics');
 
 var edit = require('./routes/edit');
 var editForm = require('./routes/editTopic');
+var edit_B =require('./routes/edit');
+var editForm_B = require('./routes/editTopic');
 
 var deleteGroup = require('./routes/delete');
 var deleteTask = require('./routes/deleteTask');
@@ -73,8 +75,12 @@ app.get('/topics/:name', topics.viewTopics);
 app.get('/joinGroup',join.joinGroup);
 app.get('/join',join.join);
 app.get('/join/:group',join.join);
+
 app.get('/editTask/:topic', edit.edit);
+app.get('/editTask_B/:topic', edit_B.edit_B);
 app.get('/edited/:topic', editForm.editTopic);
+app.get('/edited_B/:topic', editForm_B.editTopic_B);
+
 app.get('/delete/:name', deleteGroup.deleteGroup);
 app.get('/deleteTask/:topic', deleteTask.deleteTask);
 app.get('/deleteTask/', deleteTask.deleteTask);
