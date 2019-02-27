@@ -53,13 +53,14 @@ exports.submitTask = function(req, res) {
 exports.submitTask_B = function(req, res) {
   var name = req.params.name;
   var topic = req.query.topic;
+  
 
-   var minutes = req.query.minute;
-
-   var time = minutes;
+   var min = parseInt(req.query.minute);
+   var sec = parseInt(req.query.second);
+   var time = min + sec;
 
   console.log("Adding " + name);
- console.log(minutes);
+ console.log(time);
   var i, j;
   for(i = 0; i < data.groups.length; i++){
     if(data.groups[i].name == name) {      
