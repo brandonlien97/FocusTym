@@ -6,50 +6,25 @@ var users = require('../users.json');
  */
 exports.submit = function(req, res) {
 	var name = req.query.name;
-	var topic1 = req.query.topic1;
-	var time1 = req.query.time1;
-	var topic2 = req.query.topic2;
-	var time2 = req.query.time2;
-	
+		
 	if(name == ''){
 		res.render('add', data);
 	}
 
-    else if ((topic2 == '' && time2 != '') || (topic2 != '' && time2 == '')) {
-		res.render('add', data);
-	}
-
-	// Missing parameters
-	else if((topic1 == '' && time1 != '') || (topic1 != '' && time1 == '')) {
-		res.render('add', data);
-	}
+   
 	
-	else if(topic1 != '' &&  time1 != '' && !isNaN(time1)) {
-		console.log(time1);
+	else {
+		
     	var newSubject = {
 			"name": name,
-		    "topics": [
-		    {
-		    	"topic": topic1,
-			    "time": time1,
-			    "timeLeft": time1,
-			    "priority": 0
-		    }
-		    ]
+		    "topics": []
 		};
-		if((topic2 != '' &&  time2 != '' && !isNaN(time2))) {
 		
-			newSubject["topics"].push({"topic":topic2, "time": time2, "timeLeft":time2, "priority": 0});
-            
-		}
 		console.log("new subject: ", newSubject);
 		data.groups.push(newSubject);
 		users.users[getUser()].groups.push(data.groups.length-1);
 		console.log(users);
 		rend(req, res);
-	}
-	else {
-		res.render('add', data);
 	}
 
 }
