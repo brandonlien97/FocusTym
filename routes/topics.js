@@ -1,4 +1,5 @@
 var data = require('../data.json');
+"use strict";
 /*
  * GET home page.
  */
@@ -52,11 +53,12 @@ exports.submitTask = function(req, res) {
 exports.submitTask_B = function(req, res) {
   var name = req.params.name;
   var topic = req.query.topic;
-  var minutes = req.query.minute;
-  var sec = req.query.second;
-  var time = minutes + sec;
 
-  console.log(name);
+   var minutes = req.query.minute;
+
+   var time = minutes;
+
+  console.log("Adding " + name);
  console.log(minutes);
   var i, j;
   for(i = 0; i < data.groups.length; i++){
@@ -83,6 +85,7 @@ exports.submitTask_B = function(req, res) {
   }
   
 };
+
 
 exports.sort = function(req, res) {
   
