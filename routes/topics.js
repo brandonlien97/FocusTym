@@ -23,7 +23,7 @@ exports.submitTask = function(req, res) {
   var time = req.query.time;
   
   console.log(name);
-  console.log(newTopic);
+ 
   var i, j;
   for(i = 0; i < data.groups.length; i++){
     if(data.groups[i].name == name) {      
@@ -41,7 +41,42 @@ exports.submitTask = function(req, res) {
       "timeLeft": time,
       "priority": 0
     };
+     console.log(newTopic);
+    data.groups[j].topics.push(newTopic);
+
+    res.render('topics', data.groups[j]);
+  }
+  
+};
+
+exports.submitTask_B = function(req, res) {
+  var name = req.params.name;
+  var topic = req.query.topic;
+  var minutes = req.query.minute;
+  var sec = req.query.second;
+  var time = minutes + sec;
+
+  console.log(name);
+ console.log(minutes);
+  var i, j;
+  for(i = 0; i < data.groups.length; i++){
+    if(data.groups[i].name == name) {      
+        j=i;
+    }
+  }
+
+  if(topic == '' || time == 0)  {
+    res.render('addTask_B', data.groups[j]);
+  }
+  else {
     
+    var newTopic = {
+      "topic": topic,
+      "time": time,
+      "timeLeft": time,
+      "priority": 0
+    };
+     console.log(newTopic);
     data.groups[j].topics.push(newTopic);
 
     res.render('topics', data.groups[j]);

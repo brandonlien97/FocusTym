@@ -16,13 +16,20 @@ var topics = require('./routes/topics');
 
 var edit = require('./routes/edit');
 var editForm = require('./routes/editTopic');
+
 var deleteGroup = require('./routes/delete');
 var deleteTask = require('./routes/deleteTask');
 var settings = require('./routes/settings');
 var addNew = require('./routes/addNew');
+
 var addTask = require('./routes/addTask');
+var addTask_B = require('./routes/addTask');
+
 var submitNew = require('./routes/submit');
+
 var submitTask = require('./routes/topics');
+var submitTask_B = require('./routes/topics');
+
 var endTopic = require('./routes/endTopic');
 var login = require('./routes/login');
 var join = require('./routes/join');
@@ -73,9 +80,15 @@ app.get('/deleteTask/:topic', deleteTask.deleteTask);
 app.get('/deleteTask/', deleteTask.deleteTask);
 app.get('/settings', settings.settings);
 app.get('/add', addNew.addNew);
+
 app.get('/addTask/:name', addTask.addTask);
+app.get('/addTask_B/:name', addTask_B.addTask_B);
+
 app.get('/submit', submitNew.submit);
+
 app.get('/submitTask/:name', submitTask.submitTask);
+app.get('/submitTask_B/:name', submitTask_B.submitTask_B);
+
 app.get('/endTopic', endTopic.endTopic);
 app.get('/help', help.displayHelp);
 

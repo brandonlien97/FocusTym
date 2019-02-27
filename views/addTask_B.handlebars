@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Add Task B</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+	<link href="/css/focusTym.css" rel="stylesheet">
+</head>
+
+<body>
+	
+ 	<div class="container">
+
+		<a href="/topics/{{name}}"><button class="btn"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button></a>
+		<a id="settings" href="/settings">
+			<button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button>
+		</a>
+			
+		<h1></h1>
+		<form id="addTask_B" role="form" method="get" action="/submitTask_B/{{name}}">
+			<h3>New Topic for {{name}}</h3>
+	  		<div class="form-group">
+	      		<label for="topic">Topic:</label>
+	    	  <input type="text" class="form-control" id="topic" placeholder="Topic" name="topic">
+	 	    </div>
+	 	    <div class="form-group">
+	      		<label for="time">Time </label>
+	      		<p>
+	      		</p>
+	    	  <select id='minute'>
+	    	  	<option value="{'minutes':'0'}">0</option>
+	    	  	<option value="{'minutes':'60'}">1</option>
+	    	  	<option value="{'minutes':'120'}">2</option>
+	    	  	<option value="{'minutes':'180'}">3</option>
+	    	  	<option value="{'minutes':'240'}">4</option>
+	    	  	<option value="{'minutes':'300'}">5</option>
+	    	  	<option value="{'minutes':'360'}">6</option>
+	    	  	<option value="{'minutes':'420'}">7</option>
+	    	  	<option value="{'minutes':'480'}">8</option>
+	    	  	<option value="{'minutes':'540'}">9</option>
+	    	  	<option value="{'minutes':'600'}">10</option>
+	    	  	<option value="{'minutes':'660'}">11</option>
+	    	  	<option value="{'minutes':'720'}">12</option>
+	    	  	<option value="{'minutes':'780'}">13</option>
+	    	  	<option value="{'minutes':'840'}">14</option>
+	    	  	<option value="{'minutes':'900'}">15</option>
+	    	  	<option value="{'minutes':'960'}">16</option>
+	    	  	<option value="{'minutes':'1020'}">17</option>
+	    	  	<option value="{'minutes':'1080'}">18</option>
+	    	  	<option value="{'minutes':'1140'}">19</option>
+	    	  	<option value="{'minutes':'1200'}">20</option>
+	    	  	<option value="{'minutes':'1260'}">21</option>
+	    	  	<option value="{'minutes':'1320'}">22</option>
+	    	  	<option value="{'minutes':'1380'}">23</option>
+	    	  	<option value="{'minutes':'1440'}">24</option>
+	    	  	<option value="{'minutes':'1500'}">25</option>
+	    	  	<option value="{'minutes':'1560'}">26</option>
+	    	  	<option value="{'minutes':'1620'}">27</option>
+	    	  	<option value="{'minutes':'1680'}">28</option>
+	    	  	<option value="{'minutes':'1740'}">29</option>
+	    	  	<option value="{'minutes':'1800'}">30</option>
+	    	  	<option value="{'minutes':'1860'}">31</option>
+	    	  	<option value="{'minutes':'1920'}">32</option>
+	    	  	<option value="{'minutes':'1980'}">33</option>
+	    	  	<option value="{'minutes':'2040'}">34</option>
+	    	  	<option value="{'minutes':'2100'}">35</option>
+	    	  	<option value="{'minutes':'2160'}">36</option>
+	    	  	<option value="{'minutes':'2220'}">37</option>
+	    	  	<option value="{'minutes':'2280'}">38</option>
+	    	  	<option value="{'minutes':'2340'}">39</option>
+	    	  	<option value="{'minutes':'2400'}">40</option>
+	    	  	<option value="{'minutes':'2460'}">41</option>
+	    	  	<option value="{'minutes':'2520'}">42</option>
+	    	  	<option value="{'minutes':'2580'}">43</option>
+	    	  	<option value="{'minutes':'2640'}">44</option>
+	    	  	<option value="{'minutes':'2700'}">45</option>
+	    	  	<option value="{'minutes':'2760'}">46</option>
+	    	  	<option value="{'minutes':'2820'}">47</option>
+	    	  	<option value="{'minutes':'2880'}">48</option>
+	    	  	<option value="{'minutes':'2940'}">49</option>
+	    	  	<option value="{'minutes':'3000'}">50</option>
+	    	  	<option value="{'minutes':'3060'}">51</option>
+	    	  	<option value="{'minutes':'3120'}">52</option>
+	    	  	<option value="{'minutes':'3180'}">53</option>
+	    	  	<option value="{'minutes':'3240'}">54</option>
+	    	  	<option value="{'minutes':'3300'}">55</option>
+	    	  	<option value="{'minutes':'3360'}">56</option>
+	    	  	<option value="{'minutes':'3420'}">57</option>
+	    	  	<option value="{'minutes':'3480'}">58</option>
+	    	  	<option value="{'minutes':'3540'}">59</option>	    	  	
+	    	  </select>
+	    	  Minutes    
+	    	  <select id="second">
+	    	  	<option value="{'seconds':'0'}">00</option>
+	    	  	<option value="{'seconds':'1'}">01</option>
+	    	  	<option value="{'seconds':'2'}">02</option>
+	    	  	<option value="{'seconds':'3'}">03</option>
+	    	  	<option value="{'seconds':'4'}">04</option>
+	    	  	<option value="{'seconds':'5'}">05</option>
+	    	  	<option value="{'seconds':'6'}">06</option>
+	    	  	<option value="{'seconds':'7'}">07</option>
+	    	  	<option value="{'seconds':'8'}">08</option>
+	    	  	<option value="{'seconds':'9'}">09</option>
+	    	  	<option value="{'seconds':'10'}">10</option>
+	    	  	<option value="{'seconds':'11'}">11</option>
+	    	  	<option value="{'seconds':'12'}">12</option>
+	    	  	<option value="{'seconds':'13'}">13</option>
+	    	  	<option value="{'seconds':'14'}">14</option>
+	    	  	<option value="{'seconds':'15'}">15</option>
+	    	  	<option value="{'seconds':'16'}">16</option>
+	    	  	<option value="{'seconds':'17'}">17</option>
+	    	  	<option value="{'seconds':'18'}">18</option>
+	    	  	<option value="{'seconds':'19'}">19</option>
+	    	  	<option value="{'seconds':'20'}">20</option>
+	    	  	<option value="{'seconds':'21'}">21</option>
+	    	  	<option value="{'seconds':'22'}">22</option>
+	    	  	<option value="{'seconds':'23'}">23</option>
+	    	  	<option value="{'seconds':'24'}">24</option>
+	    	  	<option value="{'seconds':'25'}">25</option>
+	    	  	<option value="{'seconds':'26'}">26</option>
+	    	  	<option value="{'seconds':'27'}">27</option>
+	    	  	<option value="{'seconds':'28'}">28</option>
+	    	  	<option value="{'seconds':'29'}">29</option>
+	    	  	<option value="{'seconds':'30'}">30</option>
+	    	  	<option value="{'seconds':'31'}">31</option>
+	    	  	<option value="{'seconds':'32'}">32</option>
+	    	  	<option value="{'seconds':'33'}">33</option>
+	    	  	<option value="{'seconds':'34'}">34</option>
+	    	  	<option value="{'seconds':'35'}">35</option>
+	    	  	<option value="{'seconds':'36'}">36</option>
+	    	  	<option value="{'seconds':'37'}">37</option>
+	    	  	<option value="{'seconds':'38'}">38</option>
+	    	  	<option value="{'seconds':'39'}">39</option>
+	    	  	<option value="{'seconds':'40'}">40</option>
+	    	  	<option value="{'seconds':'41'}">41</option>
+	    	  	<option value="{'seconds':'42'}">42</option>
+	    	  	<option value="{'seconds':'43'}">43</option>
+	    	  	<option value="{'seconds':'44'}">44</option>
+	    	  	<option value="{'seconds':'45'}">45</option>
+	    	  	<option value="{'seconds':'46'}">46</option>
+	    	  	<option value="{'seconds':'47'}">47</option>
+	    	  	<option value="{'seconds':'48'}">48</option>
+	    	  	<option value="{'seconds':'49'}">49</option>
+	    	  	<option value="{'seconds':'50'}">50</option>
+	    	  	<option value="{'seconds':'51'}">51</option>
+	    	  	<option value="{'seconds':'52'}">52</option>
+	    	  	<option value="{'seconds':'53'}">53</option>
+	    	  	<option value="{'seconds':'54'}">54</option>
+	    	  	<option value="{'seconds':'55'}">55</option>
+	    	  	<option value="{'seconds':'56'}">56</option>
+	    	  	<option value="{'seconds':'57'}">57</option>
+	    	  	<option value="{'seconds':'58'}">58</option>
+	    	  	<option value="{'seconds':'59'}">59</option>	    	  	
+	    	  </select>
+	    	  Seconds
+
+	 	    </div>
+	 	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add Topic"></input>
+
+		</form>
+	</div>
+	<script src="/js/jquery-1.11.0.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/focusTym.js"></script>
+</body>
+</html>
