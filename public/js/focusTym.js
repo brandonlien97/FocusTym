@@ -5,8 +5,8 @@ $(document).ready(function() {
 	initializePage();
 	
 })
-//"https://www.freespecialeffects.co.uk/soundfx/glass/glass_breaking.mp3"
-var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+//"https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav"
+var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/glass/glass_breaking.mp3");
 
 $("#joinGroupbtn").click(group);
 function goBack(){
@@ -26,7 +26,16 @@ function initializePage() {
 	$("#nextTopic").click(function(){
 		$("#0 #delete").click();
 	});
-
+	$("#nextTopicS").click(function(){
+		$("#0 #delete").click();
+		overalyOff();
+	});
+	$("#snoz").click(function(){
+		$("#time_0").html(2);
+		timeleft = $("#time_0").html()
+		setup();
+		overalyOff();
+	});
 
 // // Instantiate a slider
 // 	var mySlider = $("#vol").bootstrapSlider();
@@ -46,6 +55,7 @@ function group(){
 	console.log("clicked");
 	$("#warn").text("Group not found");
 }
+
 
 $("#timer").text(convertSeconds(timeleft - counter));
 function convertSeconds(s) {
@@ -104,10 +114,7 @@ function setup() {
 	var interval = setInterval(timeIt, 1000);
 	var play = false;
 	function timeIt(){
-		$('#play').click(function(){
-			play = true;
-			playAudio();
-			pauseAudio()});
+		$('#play').click(function(){play = true;});
 		$('#pause').click(function(){
 			play = false;
 			pauseAudio();});
@@ -130,6 +137,6 @@ function overlayOn() {
   document.getElementById("overlay").style.display = "block";
 }
 
-function off() {
+function overalyOff() {
   document.getElementById("overlay").style.display = "none";
 }
