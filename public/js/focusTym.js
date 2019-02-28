@@ -117,8 +117,17 @@ function setup() {
 				clearInterval(interval);
 				counter = 0;
 				playAudio();
+				overlayOn()
 			}
 		}
 
 	}
+}
+
+function overlayOn() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
 }
