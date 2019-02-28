@@ -1,0 +1,177 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Edit Task B</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+	<link href="/css/focusTym.css" rel="stylesheet">
+</head>
+
+<body>
+	
+ 	<div class="container">
+
+		<a ><button class="btn" onClick=goBack()><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button></a>
+		<a id="settings" href="/settings">
+			<button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button>
+		</a>
+			
+		<h1></h1>
+		<form id="editTask" role="form" method="get" action="/edited_B/{{topic}}">
+			
+	  		<div class="form-group">
+	      		<label for="topic">Topic:</label>
+	    	  <input type="text" class="form-control" id="topic" name="topic" value="{{topic}}">
+	 	    </div>
+	 	    <div class="form-group">
+	      		<label for="time">Time: </label>
+	      		<p>
+	      		</p>
+	      		
+	      		
+	    	  <select name='minute'>
+	    	  	<option value="0">00</option>
+	    	  	<option value="60">1</option>
+	    	  	<option value="120">2</option>
+	    	  	<option value="180">3</option>
+	    	  	<option value="240">4</option>
+	    	  	<option value="300">5</option>
+	    	  	<option value="360">6</option>
+	    	  	<option value="420">7</option>
+	    	  	<option value="480">8</option>
+	    	  	<option value="540">9</option>
+	    	  	<option value="600">10</option>
+	    	  	<option value="660">11</option>
+	    	  	<option value="720">12</option>
+	    	  	<option value="780">13</option>
+	    	  	<option value="840">14</option>
+	    	  	<option value="900">15</option>
+	    	  	<option value="960">16</option>
+	    	  	<option value="1020">17</option>
+	    	  	<option value="1080">18</option>
+	    	  	<option value="1140">19</option>
+	    	  	<option value="1200">20</option>
+	    	  	<option value="1260">21</option>
+	    	  	<option value="1320">22</option>
+	    	  	<option value="1380">23</option>
+	    	  	<option value="1440">24</option>
+	    	  	<option value="1500">25</option>
+	    	  	<option value="1560">26</option>
+	    	  	<option value="1620">27</option>
+	    	  	<option value="1680">28</option>
+	    	  	<option value="1740">29</option>
+	    	  	<option value="1800">30</option>
+	    	  	<option value="1860">31</option>
+	    	  	<option value="1920">32</option>
+	    	  	<option value="1980">33</option>
+	    	  	<option value="2040">34</option>
+	    	  	<option value="2100">35</option>
+	    	  	<option value="2160">36</option>
+	    	  	<option value="2220">37</option>
+	    	  	<option value="2280">38</option>
+	    	  	<option value="2340">39</option>
+	    	  	<option value="2400">40</option>
+	    	  	<option value="2460">41</option>
+	    	  	<option value="2520">42</option>
+	    	  	<option value="2580">43</option>
+	    	  	<option value="2640">44</option>
+	    	  	<option value="2700">45</option>
+	    	  	<option value="2760">46</option>
+	    	  	<option value="2820">47</option>
+	    	  	<option value="2880">48</option>
+	    	  	<option value="2940">49</option>
+	    	  	<option value="3000">50</option>
+	    	  	<option value="3060">51</option>
+	    	  	<option value="3120">52</option>
+	    	  	<option value="3180">53</option>
+	    	  	<option value="3240">54</option>
+	    	  	<option value="3300">55</option>
+	    	  	<option value="3360">56</option>
+	    	  	<option value="3420">57</option>
+	    	  	<option value="3480">58</option>
+	    	  	<option value="3540">59</option>	    	  	
+	    	  </select>    	       	
+	    	  Minutes    
+	    	  <select name="second">
+	    	  	<option value="0">00</option>
+	    	  	<option value="1">01</option>
+	    	  	<option value="2">02</option>
+	    	  	<option value="3">03</option>
+	    	  	<option value="4">04</option>
+	    	  	<option value="5">05</option>
+	    	  	<option value="6">06</option>
+	    	  	<option value="7">07</option>
+	    	  	<option value="8">08</option>
+	    	  	<option value="9">09</option>
+	    	  	<option value="10">10</option>
+	    	  	<option value="11">11</option>
+	    	  	<option value="12">12</option>
+	    	  	<option value="13">13</option>
+	    	  	<option value="14">14</option>
+	  	  		<option value="15">15</option>
+	    	  	<option value="16">16</option>
+	    	  	<option value="17">17</option>
+	    	  	<option value="18">18</option>
+	    	  	<option value="19">19</option>
+	    	  	<option value="20">20</option>
+	    	  	<option value="21">21</option>
+	    	  	<option value="22">22</option>
+	    	  	<option value="23">23</option>
+	    	  	<option value="24">24</option>
+	    	  	<option value="25">25</option>
+	    	  	<option value="26">26</option>
+	    	  	<option value="27">27</option>
+	    	  	<option value="28">28</option>
+	    	  	<option value="29">29</option>
+	    	  	<option value="30">30</option>
+	    	  	<option value="31">31</option>
+	    	  	<option value="32">32</option>
+	    	  	<option value="33">33</option>
+	    	  	<option value="34">34</option>
+	    	  	<option value="35">35</option>
+	    	  	<option value="36">36</option>
+	    	  	<option value="37">37</option>
+	    	  	<option value="38">38</option>
+	    	  	<option value="39">39</option>
+	    	  	<option value="40">40</option>
+	    	  	<option value="41">41</option>
+	    	  	<option value="42">42</option>
+	    	  	<option value="43">43</option>
+	    	  	<option value="44">44</option>
+	    	  	<option value="45">45</option>
+	    	  	<option value="46">46</option>
+	    	  	<option value="47">47</option>
+	    	  	<option value="48">48</option>
+	    	  	<option value="49">49</option>
+	    	  	<option value="50">50</option>
+	    	  	<option value="51">51</option>
+	    	  	<option value="52">52</option>
+	    	  	<option value="53">53</option>
+	    	  	<option value="54">54</option>
+	    	  	<option value="55">55</option>
+	    	  	<option value="56">56</option>
+	    	  	<option value="57">57</option>
+	    	  	<option value="58">58</option>
+	    	  	<option value="59">59</option>	    	  	
+	    	  </select>
+	    	  Seconds
+	    	     	  
+	    	  
+
+
+
+	 	    </div>
+	 	    <input type="submit" id="submitBtn" class="btn btn-default" value="Change Topic"></input>
+
+		</form>
+	</div>
+	<script src="/js/jquery-1.11.0.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/focusTym.js"></script>
+</body>
+</html>
