@@ -23,7 +23,7 @@
 	<h1>Settings</h1>
 
 <div class="well">
-	<div class"label">Volume</div>
+	<div class="label">Volume</div>
 	<input
 	    type="text"
 	    id="vol"
@@ -33,7 +33,24 @@
 	    data-slider-step="1"
 	    data-slider-tooltip="hide"
 	>
-</well>
+</div>
+	<form id='snooze' role='form' method='get'>
+		<p>Snooze Duration
+
+		</p>
+
+    		<div class="form-group">
+    			<select name="snoozeDuration">
+    				<option value="2"> 2 </option>
+    				<option value="3"> 3 </option>
+    				<option value="4"> 4 </option>
+    				<option value="5"> 5 </option>
+    			</select>
+    			Minutes
+    		</div>
+    		 
+	</form>
+</div>
 
 
 	<script src="/js/jquery-1.11.0.js"></script>

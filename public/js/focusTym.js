@@ -5,8 +5,8 @@ $(document).ready(function() {
 	initializePage();
 	
 })
-//"https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav"
-var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/glass/glass_breaking.mp3");
+//"https://www.freespecialeffects.co.uk/soundfx/glass/glass_breaking.mp3"
+var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
 
 $("#joinGroupbtn").click(group);
 function goBack(){
@@ -46,7 +46,6 @@ function group(){
 	console.log("clicked");
 	$("#warn").text("Group not found");
 }
-
 
 $("#timer").text(convertSeconds(timeleft - counter));
 function convertSeconds(s) {
@@ -105,7 +104,10 @@ function setup() {
 	var interval = setInterval(timeIt, 1000);
 	var play = false;
 	function timeIt(){
-		$('#play').click(function(){play = true;});
+		$('#play').click(function(){
+			play = true;
+			playAudio();
+			pauseAudio()});
 		$('#pause').click(function(){
 			play = false;
 			pauseAudio();});
