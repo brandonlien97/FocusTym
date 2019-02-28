@@ -32,8 +32,9 @@ exports.submitTask = function(req, res) {
     }
   }
   var flag = 0;
-  for(i = 0; i < data.groups[i].topics.length; i++){
-    if(data.groups[i].topics[i].topic.includes(topic)){
+  for(i = 0; i < data.groups[j].topics.length; i++){
+    console.log(data.groups[j].topics[i].topic+" " +(topic));
+    if(data.groups[j].topics[i].topic.includes(topic)){
       flag++;
     }
   }
@@ -75,11 +76,20 @@ exports.submitTask_B = function(req, res) {
         j=i;
     }
   }
-
+  var flag = 0;
+  for(i = 0; i < data.groups[j].topics.length; i++){
+    console.log(data.groups[j].topics[i].topic+" " +(topic));
+    if(data.groups[j].topics[i].topic.includes(topic)){
+      flag++;
+    }
+  }
   if(topic == '' || time == 0)  {
     res.render('addTask_B', data.groups[j]);
   }
   else {
+    if(flag > 0){
+      topic = topic + " "+ flag;
+    }
     
     var newTopic = {
       "topic": topic,
