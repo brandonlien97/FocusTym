@@ -31,11 +31,12 @@ function initializePage() {
 		overalyOff();
 	});
 	$("#snoz").click(function(){
-		$("#time_0").html(2);
-		timeleft = $("#time_0").html()
+		$("#time_0").html(240);
+		timeleft = $("#time_0").html();
 		setup();
 		overalyOff();
 	});
+
 
 // // Instantiate a slider
 // 	var mySlider = $("#vol").bootstrapSlider();
