@@ -6,15 +6,21 @@ var users = require('../users.json');
  */
 exports.submit = function(req, res) {
 	var name = req.query.name;
-		
-	if(name == ''){
-		res.render('add', data);
+	var flag = 0;
+	console.log(data.groups.length);
+	for(i = 0; i < data.groups.length; i++){
+	    if(data.groups[i].name.includes(name)) {      
+			flag++;
+	    }
+  	}
+	if(name == '' ){
+		res.render('add',data);
 	}
 
-   
-	
 	else {
-		
+		if(flag > 0){
+			name = name + " "+flag;
+		}
     	var newSubject = {
 			"name": name,
 		    "topics": []

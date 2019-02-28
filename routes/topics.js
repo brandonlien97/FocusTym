@@ -31,11 +31,19 @@ exports.submitTask = function(req, res) {
         j=i;
     }
   }
-
+  var flag = 0;
+  for(i = 0; i < data.groups[i].topics.length; i++){
+    if(data.groups[i].topics[i].topic.includes(topic)){
+      flag++;
+    }
+  }
   if(topic == '' || time == '' || isNaN(time)) {
     res.render('addTask', data.groups[j]);
   }
   else {
+    if(flag > 0){
+      topic = topic + " "+ flag;
+    }
     var newTopic = {
       "topic": topic,
       "time": time,

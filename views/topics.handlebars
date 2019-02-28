@@ -18,6 +18,8 @@
 	<div class="container">
 		<a href="/index"><button class="btn"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button></a> 
 		<a id="settings" href="/settings"><button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button></a> 
+		<a id='help' href='/help'>
+			<button class="btn" style="float: right;"><i class="glyphicon glyphicon-question-sign"></i></button></a>
 		
 		<h1>{{name}}</h1>
 		<hr class=a>
@@ -47,13 +49,13 @@
 		        		<i class="glyphicon glyphicon-circle-arrow-up" style='color:blue'></i>
 		        	</button>
 		        </a>
-		        <font size='1' color='blue'>{{priority}}</font>
+		        <font size='1' color='blue'>{{priority}} priority</font>
                 {{else}}
 
 		        <a id="like" href="/sort/{{topic}}">
 				 	<button class="btn" id="like">
 		        		<i class="glyphicon glyphicon-circle-arrow-up"></i>
-		        	</button>
+		        	</button> priority
 		        </a>
 		        {{/if}}
 				
