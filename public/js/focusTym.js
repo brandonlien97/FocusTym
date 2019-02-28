@@ -47,7 +47,6 @@ function group(){
 	$("#warn").text("Group not found");
 }
 
-
 $("#timer").text(convertSeconds(timeleft - counter));
 function convertSeconds(s) {
 	console.log(s);

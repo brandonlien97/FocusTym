@@ -31,11 +31,19 @@ exports.submitTask = function(req, res) {
         j=i;
     }
   }
-
+  var flag = 0;
+  for(i = 0; i < data.groups[i].topics.length; i++){
+    if(data.groups[i].topics[i].topic.includes(topic)){
+      flag++;
+    }
+  }
   if(topic == '' || time == '' || isNaN(time)) {
     res.render('addTask', data.groups[j]);
   }
   else {
+    if(flag > 0){
+      topic = topic + " "+ flag;
+    }
     var newTopic = {
       "topic": topic,
       "time": time,
@@ -55,12 +63,12 @@ exports.submitTask_B = function(req, res) {
   var topic = req.query.topic;
   
 
-   var min = parseInt(req.query.minute);
-   var sec = parseInt(req.query.second);
-   var time = min + sec;
+  var min = parseInt(req.query.minute);
+  var sec = parseInt(req.query.second);
+  var time = min + sec;
 
   console.log("Adding " + name);
- console.log(time);
+  console.log(time);
   var i, j;
   for(i = 0; i < data.groups.length; i++){
     if(data.groups[i].name == name) {      

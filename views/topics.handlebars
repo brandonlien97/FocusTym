@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	
 		<link href="/css/focusTym.css" rel="stylesheet">
 		
@@ -18,6 +18,8 @@
 	<div class="container">
 		<a href="/index"><button class="btn"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button></a> 
 		<a id="settings" href="/settings"><button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button></a> 
+		<a id='help' href='/help'>
+			<button class="btn" style="float: right;"><i class="glyphicon glyphicon-question-sign"></i></button></a>
 		
 		<h1>{{name}}</h1>
 		<hr class=a>
@@ -47,13 +49,13 @@
 		        		<i class="glyphicon glyphicon-circle-arrow-up" style='color:blue'></i>
 		        	</button>
 		        </a>
-		        <font size='1' color='blue'>{{priority}}</font>
+		        <font size='1' color='blue'>{{priority}} priority</font>
                 {{else}}
 
 		        <a id="like" href="/sort/{{topic}}">
 				 	<button class="btn" id="like">
 		        		<i class="glyphicon glyphicon-circle-arrow-up"></i>
-		        	</button>
+		        	</button> priority
 		        </a>
 		        {{/if}}
 				
