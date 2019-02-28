@@ -105,7 +105,10 @@ function setup() {
 	var interval = setInterval(timeIt, 1000);
 	var play = false;
 	function timeIt(){
-		$('#play').click(function(){play = true;});
+		$('#play').click(function(){
+			play = true;
+			playAudio();
+			pauseAudio()});
 		$('#pause').click(function(){
 			play = false;
 			pauseAudio();});
