@@ -29,12 +29,22 @@ function initializePage() {
 	$("#nextTopicS").click(function(){
 		$("#0 #delete").click();
 		overalyOff();
+		pauseAudio();
 	});
 	$("#snoz").click(function(){
-		$("#time_0").html(240);
+		//$("#elementId :selected").text(); // The text content of the selected option
+		var s = $("#snoozeDuration").val(); 
+		
+			console.log(s);
+		if (s==undefined){
+			console.log(s);
+			s = 240;
+		}
+		$("#time_0").html(s);
 		timeleft = $("#time_0").html();
 		setup();
 		overalyOff();
+		pauseAudio();
 	});
 
 
