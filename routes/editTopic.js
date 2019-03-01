@@ -24,7 +24,7 @@ exports.editTopic = function(req, res) { 
     }
   }
   
-  if(topic == '' || time == ''||isNaN(time)) {
+  if(topic == '' || time == ''||isNaN(time) || time < 1) {
     res.render('editTopics', data.groups[h].topics[k]);
   }
   else {
@@ -68,7 +68,7 @@ exports.editTopic_B = function(req, res) { 
     }
   }
   
-  if(topic == '' || time == 0) {
+  if(topic == '' || time < 0 ||isNaN(time)) {
     res.render('editTopics_B', data.groups[h].topics[k]);
   }
   else {

@@ -38,7 +38,7 @@ exports.submitTask = function(req, res) {
       flag++;
     }
   }
-  if(topic == '' || time == '' || isNaN(time)) {
+  if(topic == '' || time == '' || isNaN(time) || time < 1) {
     res.render('addTask', data.groups[j]);
   }
   else {
@@ -83,7 +83,7 @@ exports.submitTask_B = function(req, res) {
       flag++;
     }
   }
-  if(topic == '' || time == 0)  {
+  if(topic == '' || time < 1)  {
     res.render('addTask_B', data.groups[j]);
   }
   else {
