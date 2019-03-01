@@ -7,7 +7,14 @@ $(document).ready(function() {
 })
 //https://www.freespecialeffects.co.uk/soundfx/glass/glass_breaking.mp3
 //https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav"
+
+
 var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+function changeAlarm(x) {
+	console.log(x.value);
+	audio = new Audio(x.value);
+}
+
 
 $("#joinGroupbtn").click(group);
 function goBack(){
