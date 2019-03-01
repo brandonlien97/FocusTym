@@ -6,7 +6,7 @@ $(document).ready(function() {
 	
 })
 //https://www.freespecialeffects.co.uk/soundfx/glass/glass_breaking.mp3
-var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+var audio = new Audio(settings.handlebars.getElementById("drum 1"));
 
 $("#joinGroupbtn").click(group);
 function goBack(){
