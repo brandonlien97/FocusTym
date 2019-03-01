@@ -20,37 +20,51 @@
 		<button class="btn" onclick="goBack()"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button> 
 				
 	
-	<h1>Settings</h1>
+		<h1>Settings</h1>
 
-<div class="well">
-	<div class="label">Volume</div>
-	<input
-	    type="text"
-	    id="vol"
-	    data-provide="slider"
-	    data-slider-min="1"
-	    data-slider-max="10"
-	    data-slider-step="1"
-	    data-slider-tooltip="hide"
-	>
-</div>
-	<form id='snooze' role='form' method='get'>
-		<p>Snooze Duration
+		<div class="well">
+			<div class="label">Volume</div>
+			<input
+			    type="text"
+			    id="vol"
+			    data-provide="slider"
+			    data-slider-min="1"
+			    data-slider-max="10"
+			    data-slider-step="1"
+			    data-slider-tooltip="hide"
+			>
+		</div>
+		<form id='snooze' role='form' method='get'>
+			<p>Snooze Duration</p>
+		   	<div class="form-group">
+		   		<select name="snoozeDuration" id="snoozeDuration">
+		    		<option value="2"> 2 </option>
+		    		<option value="3"> 3 </option>
+		    		<option value="4"> 4 </option>
+		    		<option value="5"> 5 </option>
+		    	</select>
+		   		Minutes
+		   	</div>
+	    		 
+		</form>
 
-		</p>
+		<form id='alarm' role='form' method='get'>
+			<h3>Alarm Options</h3>
+		   	<div class="form-group">
+		   		<select name="alarmOptions" id="alarmOptions">
+		    		<option value="https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav"> Drum 1 </option>
+		    		<option value="https://www.freespecialeffects.co.uk/soundfx/music/drum_09.wav"> Drum 9 </option>
+		    		<option value="https://www.freespecialeffects.co.uk/soundfx/music/fanfare7.wav"> Fanfare 7 </option>
+		    		<option value="https://www.freespecialeffects.co.uk/soundfx/animals/bird.wav"> Bird </option>
+		    		<option value="https://www.freespecialeffects.co.uk/soundfx/animals/frog1.wav"> Frog 1 </option>
+		    	</select>
+		   	</div>
+	    		 
+		</form>
+		
+	</div>
 
-    		<div class="form-group">
-    			<select name="snoozeDuration" id="snoozeDuration">
-    				<option value="2"> 2 </option>
-    				<option value="3"> 3 </option>
-    				<option value="4"> 4 </option>
-    				<option value="5"> 5 </option>
-    			</select>
-    			Minutes
-    		</div>
-    		 
-	</form>
-</div>
+	
 
 
 	<script src="/js/jquery-1.11.0.js"></script>
