@@ -17,7 +17,7 @@
 <body>
 	<div class="container">
 		<a href="/index"><button class="btn"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button></a> 
-		<a id="settings" href="/settings"><button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button></a> 
+		<a id="settings" href="/settings"><button align="right" class="btn" onclick=""><i class="fa fa-cog"></i>Settings</button></a> 
 		<a id='help' href='/help'>
 			<button class="btn" style="float: right;"><i class="glyphicon glyphicon-question-sign"></i></button></a>
 		
@@ -41,7 +41,7 @@
 			{{#each topics}}
 			<div id="{{@index}}" class="btn" style="width: 100%; display: table;">
 		   
-				<text id="topic_{{@index}}">{{topic}}</text>:<text id="time_{{@index}}">{{time}}</text>
+				<text id="topic_{{@index}}">{{topic}}</text> : <text id="time_{{@index}}">{{time}}</text>
 				
 		        {{#if priority}}
 		        <a id="like" href="/sort/{{topic}}">

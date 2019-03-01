@@ -39,6 +39,8 @@ function initializePage() {
 		overalyOff();
 		pauseAudio();
 	});
+
+
 	$("#snoz").click(function(){
 		//$("#elementId :selected").text(); // The text content of the selected option
 		var s = $("#snoozeDuration").val(); 
@@ -46,7 +48,7 @@ function initializePage() {
 			console.log(s);
 		if (s==undefined){
 			console.log(s);
-			s = 240;
+			s = 120;
 		}
 		$("#time_0").html(s);
 		timeleft = $("#time_0").html();
@@ -63,11 +65,15 @@ function initializePage() {
 // 	var value = $("#vol").bootstrapSlider('getValue');
 // 	console.log(value);
 // With JQuery
+
 $('#vol').slider({
 	formatter: function(value) {
-		localStorage.setItem("volume",value/10);
+		localStorage.setItem("volume", value/10);
+		document.getElementById("volume").value = localStorage.getItem("volume");
 	}
 });
+
+
 }
 
 function group(){
