@@ -69,7 +69,7 @@ function initializePage() {
 $('#vol').slider({
 	formatter: function(value) {
 		localStorage.setItem("volume", value/10);
-		document.getElementById("volume").value = localStorage.getItem("volume");
+		//document.getElementById("volume").value = localStorage.getItem("volume");
 	}
 });
 
