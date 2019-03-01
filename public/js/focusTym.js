@@ -7,12 +7,14 @@ $(document).ready(function() {
 })
 //https://www.freespecialeffects.co.uk/soundfx/glass/glass_breaking.mp3
 //https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav"
-
-
-var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+if(localStorage.getItem("audio") == undefined){
+	console.log("what");
+	localStorage.setItem("audio","https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+}
+audio = new Audio(localStorage.getItem("audio"));
 function changeAlarm(x) {
 	console.log(x.value);
-	audio = new Audio(x.value);
+	localStorage.setItem("audio",x.value);
 }
 
 
@@ -23,11 +25,14 @@ function goBack(){
 /*
  * Function that is called when the document is ready.
  */
+ var audio;
 var counter = 0;
 var timeleft;
 function initializePage() {
 	console.log("Javascript connected!");
 	timeleft = $("#time_0").html()
+	console.log(localStorage.getItem("audio"));
+	audio = new Audio(localStorage.getItem("audio"));
 
 	$("#currectTopic").text($("#topic_0").html())
 	setup();
@@ -40,14 +45,15 @@ function initializePage() {
 		pauseAudio();
 	});
 
-
+	$("#setTimer").click(function(){
+		localStorage.setItem("timer", $('#tim').val());
+	});
 	$("#snoz").click(function(){
 		//$("#elementId :selected").text(); // The text content of the selected option
-		var s = $("#snoozeDuration").val(); 
+		var s = localStorage.getItem("timer")*60;
 		
-			console.log(s);
+		console.log(s, "snoz");
 		if (s==undefined){
-			console.log(s);
 			s = 120;
 		}
 		$("#time_0").html(s);
@@ -72,6 +78,9 @@ $('#vol').slider({
 		//document.getElementById("volume").value = localStorage.getItem("volume");
 	}
 });
+
+
+	
 
 
 }
