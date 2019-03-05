@@ -13,7 +13,7 @@ exports.addTask = function(req, res) {
 			break;
 		}
 	}
-
+	data.groups["add_B"] = false;
 	res.render('addTask', data.groups[j]);
 };
 
@@ -27,6 +27,6 @@ exports.addTask_B = function(req, res) {
 			break;
 		}
 	}
-
+	data.groups["add_B"] = true;
 	res.render('addTask_B', data.groups[j]);
 };

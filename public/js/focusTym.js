@@ -34,6 +34,12 @@ function initializePage() {
 	console.log(localStorage.getItem("audio"));
 	audio = new Audio(localStorage.getItem("audio"));
 
+	
+	$("#edit #editTask").click(function(){
+		
+		ga('send', 'event', 'edit', 'click');
+	});
+
 	$("#currectTopic").text($("#topic_0").html())
 	setup();
 	$("#nextTopic").click(function(){
@@ -80,7 +86,6 @@ $('#vol').slider({
 });
 
 
-	
 
 
 }
