@@ -40,6 +40,7 @@ exports.editTopic = function(req, res) { 
     
     data.groups[h].topics[k] = newTopic;
     data.groups[h].topics.sort(GetSortOrder('priority'));
+	  data.groups["add_B"] = false;
     res.render('topics', data.groups[h]); 
   }
 };
@@ -84,6 +85,7 @@ exports.editTopic_B = function(req, res) { 
     
     data.groups[h].topics[k] = newTopic;
     data.groups[h].topics.sort(GetSortOrder('priority'));
+	  data.groups["add_B"] = false;
     res.render('topics', data.groups[h]); 
   }
 };
