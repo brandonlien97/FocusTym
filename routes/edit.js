@@ -16,7 +16,7 @@ exports.edit = function(req, res) {
         }   
       }
     }
- 
+ data.groups["add_B"] = false;
   res.render('editTopics', data.groups[h].topics[k]);
 	
 };
@@ -35,7 +35,7 @@ exports.edit_B = function(req, res) {
         }   
       }
     }
- 
+ data.groups["add_B"] = true;
   res.render('editTopics_B', data.groups[h].topics[k]);
   
 };
