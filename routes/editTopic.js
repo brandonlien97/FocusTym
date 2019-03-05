@@ -85,7 +85,7 @@ exports.editTopic_B = function(req, res) { 
     
     data.groups[h].topics[k] = newTopic;
     data.groups[h].topics.sort(GetSortOrder('priority'));
-	  data.groups["add_B"] = false;
+	  data.groups["add_B"] = true;
     res.render('topics', data.groups[h]); 
   }
 };
