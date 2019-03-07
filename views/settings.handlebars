@@ -34,8 +34,9 @@
 			    data-slider-tooltip="hide"
 			>
 		</div>
+		<h3>Snooze Duration</h3>
 		Minutes:
-		<input type="number" name="tim" id="tim" min="1" max="5"><button class="btn" id="setTimer">Update</button> 
+		<input  type="number" name="tim" id="tim" onchange='saveValue(this);' min="1" max="5"  ><button class="btn" id="setTimer">Update</button> </input>
 				
 
 		<!--<select id="ddlViewBy">
@@ -57,7 +58,24 @@
 	</div>
 
 	
+<script type="text/javascript">
+        document.getElementById("tim").value = getSavedValue("tim");    // set the value to this input
 
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "1";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
 
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
