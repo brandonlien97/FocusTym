@@ -66,6 +66,7 @@ function rend(req, res){
 function addUser(usr,j){
   var i,j;
   for(i = 0; i < users.users.length; i++){
+
     if(!users.users[i].name.localeCompare( usr)) {
 
     console.log(users.users[i],usr);
@@ -75,7 +76,7 @@ function addUser(usr,j){
       j=0;
     }
   }
-  console.log(users.users[j].name.localeCompare( usr),usr,users.users[j]);
+
   if(!users.users[j].name.localeCompare( usr)){
     return users.users[j].groups;
   }else{

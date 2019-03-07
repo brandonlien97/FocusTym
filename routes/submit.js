@@ -59,37 +59,39 @@ function rend(req, res){
 }
 
 function addUser(usr,j){
-	var i,j;
-	for(i = 0; i < users.users.length; i++){
-		if(!users.users[i].name.localeCompare( usr)) {
+  var i,j;
+  for(i = 0; i < users.users.length; i++){
 
-			j=i;
-			break;
-		}else{
-			j=0;
-		}
-	}
-	console.log(users.users[j].name.localeCompare( usr),usr,users.users[j]);
-	if(!users.users[j].name.localeCompare( usr)){
-		return users.users[j].groups;
-	}else{
-		var newUser = {
-			"name": usr,
-			"groups":[]
-		};
-		users.users.push(newUser);
-		return [];
-	}
+    if(!users.users[i].name.localeCompare( usr)) {
+
+    console.log(users.users[i],usr);
+      j=i;
+      break;
+    }else{
+      j=0;
+    }
+  }
+  if(!users.users[j].name.localeCompare( usr)){
+    return users.users[j].groups;
+  }else{
+    var newUser = {
+      "name": usr,
+      "groups":[]
+    };
+    users.users.push(newUser);
+    console.log(users);
+    return [];
+  }
 }
 function getUser(){
-	var i,j;
-	for(i = 0; i < users.users.length; i++){
-		if(!users.users[i].name.localeCompare( global.globalUser)) {
-			j=i;
-			break;
-		}else{
-			j=0;
-		}
-	}
-	return j;
+  var i,j;
+  for(i = 0; i < users.users.length; i++){
+    if(!users.users[i].name.localeCompare( global.globalUser)) {
+      j=i;
+      break;
+    }else{
+      j=0;
+    }
+  }
+  return j;
 }

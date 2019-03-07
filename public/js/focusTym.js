@@ -164,7 +164,7 @@ function setup() {
 		if(play){
 			counter++;
 			$("#timer").text(convertSeconds(timeleft - counter));
-			if (counter == timeleft) {
+			if (counter >= timeleft) {
 				clearInterval(interval);
 				counter = 0;
 				playAudio();

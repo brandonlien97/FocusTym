@@ -58,9 +58,18 @@ ga('send', 'pageview');
 	      		<label for="time">Time:</label><font color="red"> (# of seconds):</font>
 	    	  <input type="text" class="form-control" id="time" value="{{time}}" name="time" required>
 	 	    </div>
-	 	    <input type="submit" id="submitBtn" class="btn btn-default" value="Change Topic"></input>
+	 	    <input type="submit" id="submitBtn" class="btn btn-default" value="Change Topic" onclick="notify()"></input>
 
 		</form>
+			 <script>
+	 	    	function notify() {
+	 	    		value = document.getElementById('time').value
+		 	    	
+		 	    	if (value != '' || isNaN(value) || value < 0) {
+					    alert("Please use only positive numbers for the time input");
+					}
+ 				}
+ 			</script>
 	</div>
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>

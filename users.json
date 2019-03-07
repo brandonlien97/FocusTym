@@ -1,11 +1,11 @@
 {
 	"users":[
 		{
-			"name":"",
+			"name":" ",
 			"groups":[0,1,2,3,4]
 		},	
 		{
-			"name":"asdf",
+			"name":"asdf ",
 			"groups":[0,2]
 		}	
 	]
