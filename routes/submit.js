@@ -39,6 +39,9 @@ exports.submit = function(req, res) {
 
 function rend(req, res){
 	var u = global.globalUser;
+	if(!u){
+		u = " ";
+	}
 	console.log(u);
 	var p = req.query.password;
 		var i,j;

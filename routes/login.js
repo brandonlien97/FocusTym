@@ -11,6 +11,9 @@ exports.view = function(req, res){
 
 function rend(req, res){
 	var u = global.globalUser;
+	if(!u){
+		u = " ";
+	}
 	var p = req.query.password;
 		var i,j;
 	for(i = 0; i < data.groups.length; i++){

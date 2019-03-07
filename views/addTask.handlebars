@@ -68,8 +68,8 @@ ga('send', 'pageview');
 	 	    	function notify() {
 	 	    		value = document.getElementById('time').value
 		 	    	
-		 	    	if (value != '' || isNaN(value) || value < 0) {
-					    alert("Please use only positive numbers for the time input");
+		 	    	if (value == '' || isNaN(value) || value < 0) {
+					    alert("Please use only positive numbers for the time input, " + value + " is not valid");
 					}
  				}
  			</script>
