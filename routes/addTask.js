@@ -3,6 +3,7 @@ var users = require('../users.json');
 /*
  * GET home page.
  */
+
 exports.addTask = function(req, res) {
 	console.log("Add for: " + req.params.name+" ");
 
@@ -14,6 +15,7 @@ exports.addTask = function(req, res) {
 		}
 	}
 	data.groups["add_B"] = false;
+
 	res.render('addTask', data.groups[j]);
 };
 

@@ -146,7 +146,6 @@ function pauseAudio() {
 
 
 function setup() {
-	console.log("Timer ready");
 	var timer = timeleft
 	$("#timer").text(convertSeconds(timer - counter));
 

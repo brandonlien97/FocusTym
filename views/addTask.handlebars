@@ -22,6 +22,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/alert.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	
 	<link href="/css/focusTym.css" rel="stylesheet">
@@ -61,8 +62,17 @@ ga('send', 'pageview');
 	      		<label for="time">Time </label><font color="red"> (# of seconds):</font>
 	    	  <input type="text" class="form-control" id="time" placeholder="Time" name="time" required>
 	 	    </div>
-	 	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add Topic"></input>
-
+	 	    <input type="submit" id="submitBtn" class="btn btn-default" onclick="notify()" value="Add Topic"></input>
+	 	    
+	 	    <script>
+	 	    	function notify() {
+	 	    		value = document.getElementById('time').value
+		 	    	
+		 	    	if (value != '' && isNaN(value) ) {
+					    alert("Please use only numbers for the time input");
+					}
+ 				}
+ 			</script>
 		</form>
 	</div>
 	<script src="/js/jquery-1.11.0.js"></script>

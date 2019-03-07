@@ -4,6 +4,7 @@ var users = require('../users.json');
 /*
  * GET home page.
  */
+
 exports.submit = function(req, res) {
 	var name = req.query.name;
 	var flag = 0;

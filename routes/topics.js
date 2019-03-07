@@ -3,6 +3,7 @@ var data = require('../data.json');
 /*
  * GET home page.
  */
+
 exports.viewTopics = function(req, res) { 
 	var name = req.params.name; 
   	console.log("The project name is: " + name);
@@ -22,7 +23,7 @@ exports.submitTask = function(req, res) {
   var name = req.params.name;
   var topic = req.query.topic;
   var time = req.query.time;
-  
+
   console.log(name);
  
   var i, j;
@@ -38,7 +39,7 @@ exports.submitTask = function(req, res) {
       flag++;
     }
   }
-  if(topic == '' || time == '' || isNaN(time) || time < 1) {
+  if(topic == '' || time == '' || isNaN(time) || time < 1) {  
     res.render('addTask', data.groups[j]);
   }
   else {
