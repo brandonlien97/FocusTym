@@ -43,9 +43,7 @@ ga('send', 'pageview');
  	<div class="container">
 
 		<a ><button class="btn" onClick=goBack()><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button></a>
-		<a id="settings" href="/settings">
-			<button align="right" class="btn"" onclick=""><i class="fa fa-cog"></i>Settings</button>
-		</a>
+{{>header}}
 			
 		<h1></h1>
 		<form id="editTask" role="form" method="get" action="/edited/{{topic}}">
