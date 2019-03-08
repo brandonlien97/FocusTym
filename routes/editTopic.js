@@ -70,7 +70,7 @@ exports.editTopic_B = function(req, res) { 
     }
   }
   
-  if(topic == '' || time < 0 ||isNaN(time)) {
+  if(topic == '' || time < 1) {
 	  data.groups["add_B"] = true;
     res.render('editTopics_B', data.groups[h].topics[k]);
   }

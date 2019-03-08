@@ -32,7 +32,7 @@ ga('send', 'pageview');
 		
 		<h1>{{name}}</h1>
 
-		{{#if add_B}}
+		
 		<hr class=a>
 		<div>	
 			<div style="width: 100%; display: table;">
@@ -91,62 +91,7 @@ ga('send', 'pageview');
 
 
 
-		{{else}}
-		<hr class=a>
-		<div>	
-			<div style="width: 100%; display: table;">
-			
-			<a id="addTask" href="/addTask/{{name}}">
-		    	<button class="btn">
-					<div style="width: 100%; display: table;">
-					<div class="btn btn-default friends" style="display: table-row">
-		       		Add Topic 
-					<i class="fas fa-plus"></i>
-		       
-		        	</div>
-		    		</div> 
-		    	</button>
-			</a>
-
-			{{#each topics}}
-			<div id="{{@index}}" class="btn" style="width: 100%; display: table;">
-		   
-				<text id="topic_{{@index}}">{{topic}}</text> : <text id="time_{{@index}}">{{time}}</text>
-				
-		        {{#if priority}}
-		        <a id="like" href="/sort/{{topic}}">
-				 	<button class="btn" id="like">
-		        		<i class="glyphicon glyphicon-circle-arrow-up" style='color:blue'></i>
-		        	</button>
-		        </a>
-		        <font size='1' color='blue'>{{priority}} priority</font>
-                	{{else}}
-
-		        <a id="like" href="/sort/{{topic}}">
-				 	<button class="btn" id="like">
-		        		<i class="glyphicon glyphicon-circle-arrow-up"></i>
-		        	</button> priority
-		        </a>
-		        {{/if}}
-				
-				<a id="delete" href="/deleteTask/{{topic}}">
-		        	<button class="btn" id="delete">
-		        		<i class="fas fa-trash-alt"></i>
-		        	</button>
-		      	</a>
-
-		        <a id="edit" href="/editTask/{{topic}}">
-		        	<button class="btn" id="editTask">
-		           		<i class="fa fa-edit"></i>
-		        	</button>
-		        </a>
-		        
-		   </div>
-		    {{/each}}
-		    
-		</div>
-			</hr>
-		{{/if}}			
+	
 		<div>
 
 			
