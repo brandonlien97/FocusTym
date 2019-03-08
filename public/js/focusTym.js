@@ -64,6 +64,7 @@ function initializePage() {
 		}
 		$("#time_0").html(s);
 		timeleft = $("#time_0").html();
+
 		setup();
 		overalyOff();
 		pauseAudio();
@@ -80,8 +81,7 @@ function initializePage() {
 
 $('#vol').slider({
 	formatter: function(value) {
-		localStorage.setItem("volume", value/10);
-		
+		localStorage.setItem("volume", value/10);	
 	}
 });
 

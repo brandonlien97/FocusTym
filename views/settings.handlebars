@@ -60,13 +60,15 @@
 <script type="text/javascript">
         document.getElementById("tim").value = getSavedValue("tim");    // set the value to this input
 		document.getElementById('alarmOptions').value = localStorage.getItem("audio");
-        // FOR VOLUME SLIDER
-        // var valvol = localStorage.getItem("volume") *10;
-        // console.log("vol " + valvol);
-        // document.getElementById("vol").value = valvol.toString;
 
 
-        
+       // FOR VOLUME SLIDER
+       // var valvol = localStorage.getItem("volume");
+	   // valvol = parseFloat(valvol) * 10;
+       // console.log("vol " + valvol);
+
+       // document.getElementById("vol").value = valvol;
+
 
         //Save the value function - save it to localStorage as (ID, VALUE)
         function saveValue(e){
