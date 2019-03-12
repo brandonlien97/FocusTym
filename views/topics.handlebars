@@ -52,7 +52,7 @@ ga('send', 'pageview');
 			{{#each topics}}
 			<div id="{{@index}}" class="btn" style="width: 100%; display: table;">
 		   
-				<text id="topic_{{@index}}">{{topic}}</text> : <text id="time_{{@index}}">{{time}}</text>
+				<text id="topic_{{@index}}">{{topic}}</text> <noscript id="time_{{@index}}">{{time}}</noscript>
 
 				
 		        {{#if priority}}
