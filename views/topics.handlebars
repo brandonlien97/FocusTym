@@ -52,8 +52,43 @@ ga('send', 'pageview');
 			{{#each topics}}
 			<div id="{{@index}}" class="btn" style="width: 100%; display: table;">
 		   
-				<text id="topic_{{@index}}">{{topic}}</text> <noscript id="time_{{@index}}">{{time}}</noscript>
+				<text id="topic_{{@index}}">{{topic}}</text> <text id="timeconvert_{{@index}}">{{time}}</text><noscript id="time_{{@index}}">{{time}}</noscript>
 
+				
+				<script type="text/javascript">
+					var time = document.getElementById("timeconvert_{{@index}}").innerHTML;
+					
+					convert(time);
+
+					function convert(time) {
+						var tim = convertSeconds(time);
+						document.getElementById('timeconvert_{{@index}}').innerHTML = tim;
+					}
+
+					function convertSeconds(s) {
+						console.log(s);
+			
+						var min = Math.floor(s / 60);
+						var sec = s % 60;
+						if (min < 10) {
+							if (sec < 10) {
+								return '0' + min + ':' + '0' + sec;
+							}
+							else {
+								return '0' + min + ':' + sec;
+							}
+						}
+						else {
+							if (sec < 10) {
+								return min + ':' + '0' + sec;
+							}
+							else {
+								return min + ':' + sec;
+							}
+						}
+					}
+
+				</script>
 				
 		        {{#if priority}}
 		        <a id="like" href="/sort/{{topic}}">
