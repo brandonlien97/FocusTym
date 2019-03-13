@@ -131,13 +131,14 @@ https://www.freespecialeffects.co.uk/soundfx/animals/frog1.wav
 */
 
 //var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
-audio.loop = true;
+
 function playAudio() {
 	console.log(audio.volume, localStorage.getItem("volume"));
 	if(localStorage.getItem("volume") < 1){
 		audio.volume = localStorage.getItem("volume");
 	}
 	console.log(audio.volume);
+	audio.loop = true;
 	audio.play();
 }
 function pauseAudio() {
