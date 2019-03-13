@@ -9,7 +9,7 @@ $(document).ready(function() {
 //https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav"
 if(localStorage.getItem("audio") == undefined){
 	console.log("what");
-	localStorage.setItem("audio","https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
+	localStorage.setItem("audio","/alarm/drum_01.wav");
 }
 audio = new Audio(localStorage.getItem("audio"));
 function changeAlarm(x) {
