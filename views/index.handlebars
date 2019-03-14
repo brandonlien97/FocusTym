@@ -25,6 +25,7 @@ ga('send', 'pageview');
 
 <body>
 	<div class="container">
+ 		<h1>  </h1>
 	<a href="/"><button class="btn"><i class="fa fa-arrow-alt-circle-left"></i>Logout</button></a> 
 			{{>header}}
 			
@@ -35,7 +36,7 @@ ga('send', 'pageview');
 				<a id="add" href="/add">
 		    	<button class="btn">
 					<div style="width: 100%; display: table;">
-					<div class="btn btn-default friends" style="display: table-row">
+					<div class="btn friends" style="display: table-row">
 		       		New Group 
 					<i class="fas fa-plus"></i>
 		       
@@ -45,7 +46,7 @@ ga('send', 'pageview');
 		    	<a id="add" href="/joinGroup">
 		    	<button class="btn">
 					<div style="width: 100%; display: table;">
-					<div class="btn btn-default friends" style="display: table-row">
+					<div class="btn friends" style="display: table-row">
 		       		Join Group 
 					<i class="fas fa-plus"></i>
 		       
@@ -57,7 +58,7 @@ ga('send', 'pageview');
 		   		{{#each groups}}
 				<hr>
 				<a href="/topics/{{name}}" id="{{name}}">
-					<button class="btn btn-default" style="width:90%; display: table-row" >
+					<button class="btn" style="width:90%; display: table-row" >
 		      	     {{name}}
 				
 		   			</button>
