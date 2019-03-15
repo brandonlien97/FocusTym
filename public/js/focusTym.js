@@ -11,6 +11,9 @@ if(localStorage.getItem("audio") == undefined){
 	console.log("what");
 	localStorage.setItem("audio","/alarm/drum_01.wav");
 }
+if(localStorage.getItem("timer") == 0){
+	localStorage.setItem("timer",1);
+}
 audio = new Audio(localStorage.getItem("audio"));
 function changeAlarm(x) {
 	console.log(x.value);
