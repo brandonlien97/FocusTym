@@ -25,12 +25,16 @@ function goBack(){
 /*
  * Function that is called when the document is ready.
  */
+ var play;
  var audio;
 var counter = 0;
 var timeleft;
 function initializePage() {
+	var interval = setInterval(timeIt, 1000);
+	play = false;
+	setup();
 	console.log("Javascript connected!");
-	$("#play").hide();
+
 	timeleft = $("#time_0").html()
 	console.log(localStorage.getItem("audio"));
 	audio = new Audio(localStorage.getItem("audio"));
@@ -42,7 +46,7 @@ function initializePage() {
 	});
 
 	$("#currectTopic").text($("#topic_0").html())
-	setup();
+	
 	$("#nextTopic").click(function(){
 		$("#0 #delete").click();
 	});
@@ -88,6 +92,7 @@ $('#vol').slider({
 
 $("#play").click(function(){
 	console.log("WHJIGADSJKLFHK:JDFHKJA");
+	play = true
 });
 
 
@@ -155,10 +160,9 @@ function pauseAudio() {
 function setup() {
 	var timer = timeleft
 	$("#timer").text(convertSeconds(timer - counter));
-
-	var interval = setInterval(timeIt, 1000);
-	var play = false;
-	function timeIt(){
+	
+}
+function timeIt(){
 		$('#play').click(function(){
 			play = true;
 			playAudio();
@@ -180,8 +184,6 @@ function setup() {
 		}
 
 	}
-	$("#play").show();
-}
 
 function overlayOn() {
   document.getElementById("overlay").style.display = "block";
