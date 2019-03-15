@@ -86,7 +86,9 @@ $('#vol').slider({
 	}
 });
 
-
+$("#play").click(function(){
+	console.log("WHJIGADSJKLFHK:JDFHKJA");
+});
 
 
 }
