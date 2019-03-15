@@ -30,6 +30,7 @@ var counter = 0;
 var timeleft;
 function initializePage() {
 	console.log("Javascript connected!");
+	$("#play").hide();
 	timeleft = $("#time_0").html()
 	console.log(localStorage.getItem("audio"));
 	audio = new Audio(localStorage.getItem("audio"));
@@ -134,7 +135,10 @@ https://www.freespecialeffects.co.uk/soundfx/animals/frog1.wav
 
 function playAudio() {
 	console.log(audio.volume, localStorage.getItem("volume"));
-	if(localStorage.getItem("volume") < 1){
+	if(localStorage.getItem("volume") == null){
+		localStorage.setItem("volume", .9);
+	}
+	if(localStorage.getItem("volume") <= 1){
 		audio.volume = localStorage.getItem("volume");
 	}
 	console.log(audio.volume);
@@ -174,6 +178,7 @@ function setup() {
 		}
 
 	}
+	$("#play").show();
 }
 
 function overlayOn() {
