@@ -28,9 +28,10 @@ function goBack(){
  var play;
  var audio;
 var counter = 0;
+var interval;
 var timeleft;
 function initializePage() {
-	var interval = setInterval(timeIt, 1000);
+	//interval = setInterval(timeIt, 1000);
 	play = false;
 	setup();
 	console.log("Javascript connected!");
@@ -76,24 +77,25 @@ function initializePage() {
 	});
 
 
-// // Instantiate a slider
-// 	var mySlider = $("#vol").bootstrapSlider();
- 
-// // Call a method on the slider
-// 	var value = $("#vol").bootstrapSlider('getValue');
-// 	console.log(value);
-// With JQuery
+	// // Instantiate a slider
+	// 	var mySlider = $("#vol").bootstrapSlider();
+	 
+	// // Call a method on the slider
+	// 	var value = $("#vol").bootstrapSlider('getValue');
+	// 	console.log(value);
+	// With JQuery
 
-$('#vol').slider({
-	formatter: function(value) {
-		localStorage.setItem("volume", value/10);	
-	}
-});
+	$('#vol').slider({
+		formatter: function(value) {
+			localStorage.setItem("volume", value/10);	
+		}
+	});
 
-$("#play").click(function(){
-	console.log("WHJIGADSJKLFHK:JDFHKJA");
-	play = true
-});
+	$("#play").click(function(){
+		console.log("WHJIGADSJKLFHK:JDFHKJA");
+		play = true
+	});
+	$("#timer").text(convertSeconds(timeleft - counter));
 
 
 }
@@ -141,14 +143,14 @@ https://www.freespecialeffects.co.uk/soundfx/animals/frog1.wav
 //var audio = new Audio("https://www.freespecialeffects.co.uk/soundfx/music/drum_01.wav");
 
 function playAudio() {
-	console.log(audio.volume, localStorage.getItem("volume"));
+	//console.log(audio.volume, localStorage.getItem("volume"));
 	if(localStorage.getItem("volume") == null){
 		localStorage.setItem("volume", .9);
 	}
 	if(localStorage.getItem("volume") <= 1){
 		audio.volume = localStorage.getItem("volume");
 	}
-	console.log(audio.volume);
+	//console.log(audio.volume);
 	audio.loop = true;
 	audio.play();
 }
@@ -158,15 +160,21 @@ function pauseAudio() {
 
 
 function setup() {
-	var timer = timeleft
-	$("#timer").text(convertSeconds(timer - counter));
+	interval = setInterval(timeIt, 1000);
+	$("#timer").text(convertSeconds(timeleft - counter));
 	
 }
 function timeIt(){
+	//interval = setInterval(timeIt, 1000);
+	//$("#timer").text(convertSeconds(timeleft - counter));
+	
 		$('#play').click(function(){
 			play = true;
 			playAudio();
 			pauseAudio();
+			// interval = setInterval(timeIt, 1000);
+			$("#timer").text(convertSeconds(timeleft - counter));
+	
 		});
 		$('#pause').click(function(){
 			play = false;
@@ -192,3 +200,4 @@ function overlayOn() {
 function overalyOff() {
   document.getElementById("overlay").style.display = "none";
 }
+

@@ -53,13 +53,14 @@ ga('send', 'pageview');
 			{{#each topics}}
 			<div id="{{@index}}" class="btn" style="width: 100%; display: table;">
 		   
-				<text id="topic_{{@index}}">{{topic}}</text><text style='margin-left: 30px'>        </text><text id="timeconvert_{{@index}}">{{time}}</text><noscript id="time_{{@index}}">{{time}}</noscript>
+				<text id="topic_{{@index}}">{{topic}}</text><text style='margin-left: 30px'>        </text><text id="timeconvert_{{@index}}"></text><noscript id="time_{{@index}}">{{time}}</noscript>
 
 				
 				<script type="text/javascript">
-					var time = document.getElementById("timeconvert_{{@index}}").innerHTML;
+					var time = document.getElementById("time_{{@index}}").innerHTML;
 					
 					convert(time);
+
 
 					function convert(time) {
 						var tim = convertSeconds(time);
@@ -88,6 +89,7 @@ ga('send', 'pageview');
 							}
 						}
 					}
+
 
 				</script>
 				
